@@ -262,3 +262,32 @@ nav a:hover{
     color:#FFD700;
     font-weight:bold;
 }
+.plato{
+    transition:.3s;
+    cursor:pointer;
+}
+
+.plato:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 25px rgba(255,215,0,.4);
+}
+
+.precio{
+    font-size:26px;
+    color:#FFD700;
+    font-weight:bold;
+    text-align:center;
+    margin:10px 0;
+}
+
+.pedir{
+    display:block;
+    background:#25D366;
+    color:white;
+    text-align:center;
+    margin:15px;
+    padding:12px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:bold;
+}
