@@ -291,3 +291,36 @@ nav a:hover{
     text-decoration:none;
     font-weight:bold;
 }
+#destacados{
+    max-width:1100px;
+    margin:60px auto;
+    padding:20px;
+    text-align:center;
+}
+
+.destacados-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.destacado{
+    background:#1b1b1b;
+    border:2px solid #FFD700;
+    border-radius:15px;
+    padding:25px;
+    transition:.3s;
+}
+
+.destacado:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 25px rgba(255,215,0,.3);
+}
+
+.precio-destacado{
+    display:block;
+    font-size:30px;
+    color:#FFD700;
+    font-weight:bold;
+    margin:15px 0;
+}
