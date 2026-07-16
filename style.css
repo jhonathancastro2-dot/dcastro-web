@@ -215,3 +215,22 @@ nav a:hover{
 .caja h3{
     color:#FFD700;
 }
+#testimonios{
+    max-width:1000px;
+    margin:50px auto;
+    padding:20px;
+    text-align:center;
+}
+
+.testimonio{
+    background:#222;
+    border-left:5px solid #FFD700;
+    border-radius:12px;
+    padding:20px;
+    margin:20px 0;
+}
+
+.testimonio strong{
+    color:#FFD700;
+    font-size:20px;
+}
