@@ -234,3 +234,31 @@ nav a:hover{
     color:#FFD700;
     font-size:20px;
 }
+nav{
+    position:sticky;
+    top:0;
+    background:#111;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    padding:15px;
+    border-bottom:2px solid #FFD700;
+    z-index:1000;
+}
+
+nav a{
+    color:#FFD700;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#fff;
+}
+
+.logo{
+    font-size:28px;
+    color:#FFD700;
+    font-weight:bold;
+}
