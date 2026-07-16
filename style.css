@@ -103,3 +103,21 @@ li:hover{
     transform:scale(1.03);
     transition:.3s;
 }
+#promociones{
+    max-width:900px;
+    margin:40px auto;
+    padding:20px;
+}
+
+#promociones h2{
+    text-align:center;
+    color:#FFD700;
+}
+
+.promo{
+    background:#222;
+    border-left:6px solid #FFD700;
+    padding:20px;
+    margin:15px 0;
+    border-radius:12px;
+}
