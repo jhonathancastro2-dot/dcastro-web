@@ -324,3 +324,20 @@ nav a:hover{
     font-weight:bold;
     margin:15px 0;
 }
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:50px 20px;
+    border-top:3px solid #FFD700;
+}
+
+footer h2{
+    color:#FFD700;
+    margin-bottom:20px;
+}
+
+footer p{
+    margin:8px 0;
+    font-size:18px;
+}
