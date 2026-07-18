@@ -1,15 +1,10 @@
 function verOpciones(producto){
+
     document.getElementById("ventanaMenu").style.display="flex";
     document.getElementById("tituloProducto").innerHTML=producto;
-}
 
-function cerrarVentana(){
-    document.getElementById("ventanaMenu").style.display="none";
-}
+    if(producto=="Alitas de Pollo"){
+        document.getElementById("imagenProducto").src="https://images.unsplash.com/photo-1567620832903-9fc6debc209f?w=600";
+    }
 
-function pedirWhatsApp(opcion){
-    window.open(
-        "https://wa.me/573206564360?text=Hola D'CASTRO, quiero pedir " + encodeURIComponent(opcion),
-        "_blank"
-    );
 }
