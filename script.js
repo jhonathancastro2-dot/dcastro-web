@@ -27,6 +27,13 @@ if(producto=="Perros Calientes"){
     <button onclick="pedirWhatsApp('Perro Súper - $18.000')">🌭 Perro Súper - $18.000</button>
     `;
 }
+    if(producto=="Sandwiches"){
+    botones=`
+    <button onclick="pedirWhatsApp('Sándwich Cubano - $13.000')">🥪 Sándwich Cubano - $13.000</button>
+    <button onclick="pedirWhatsApp('Sándwich Especial - $16.000')">🥪 Sándwich Especial - $16.000</button>
+    <button onclick="pedirWhatsApp('Sándwich Doble - $20.000')">🥪 Sándwich Doble - $20.000</button>
+    `;
+}
     document.getElementById("opcionesProducto").innerHTML=botones;
 }
 
