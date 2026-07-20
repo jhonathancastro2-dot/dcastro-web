@@ -20,7 +20,13 @@ function verOpciones(producto){
         <button onclick="pedirWhatsApp('Hamburguesa Doble - $22.000')">🍔 Doble - $22.000</button>
         `;
     }
-
+if(producto=="Perros Calientes"){
+    botones=`
+    <button onclick="pedirWhatsApp('Perro Caliente Tradicional')">🌭 Perro Tradicional</button>
+    <button onclick="pedirWhatsApp('Perro Caliente Especial')">🌭 Perro Especial</button>
+    <button onclick="pedirWhatsApp('Perro Caliente Súper')">🌭 Perro Súper</button>
+    `;
+}
     document.getElementById("opcionesProducto").innerHTML=botones;
 }
 
