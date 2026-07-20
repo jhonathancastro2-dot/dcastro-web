@@ -34,6 +34,13 @@ if(producto=="Perros Calientes"){
     <button onclick="pedirWhatsApp('Sándwich Doble - $20.000')">🥪 Sándwich Doble - $20.000</button>
     `;
 }
+    if(producto=="Salchipapas"){
+    botones=`
+    <button onclick="pedirWhatsApp('Salchipapa Personal - $12.000')">🍟 Salchipapa Personal - $12.000</button>
+    <button onclick="pedirWhatsApp('Salchipapa Especial - $18.000')">🍟 Salchipapa Especial - $18.000</button>
+    <button onclick="pedirWhatsApp('Salchipapa Mixta - $25.000')">🍟 Salchipapa Mixta - $25.000</button>
+    `;
+}
     document.getElementById("opcionesProducto").innerHTML=botones;
 }
 
