@@ -41,6 +41,14 @@ if(producto=="Perros Calientes"){
     <button onclick="pedirWhatsApp('Salchipapa Mixta - $25.000')">🍟 Salchipapa Mixta - $25.000</button>
     `;
 }
+    if(producto=="Pollo Broaster"){
+    botones=`
+    <button onclick="pedirWhatsApp('1 Presa Broaster - $5.000')">🍗 1 Presa - $5.000</button>
+    <button onclick="pedirWhatsApp('2 Presas Broaster + Papas + Gaseosa - $14.000')">🍗 2 Presas + Papas + Gaseosa - $14.000</button>
+    <button onclick="pedirWhatsApp('4 Presas Broaster - $20.000')">🍗 4 Presas - $20.000</button>
+    <button onclick="pedirWhatsApp('Broaster Familiar - $38.000')">🍗 Broaster Familiar - $38.000</button>
+    `;
+}
     document.getElementById("opcionesProducto").innerHTML=botones;
 }
 
