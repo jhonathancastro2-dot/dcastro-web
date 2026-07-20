@@ -22,9 +22,9 @@ function verOpciones(producto){
     }
 if(producto=="Perros Calientes"){
     botones=`
-    <button onclick="pedirWhatsApp('Perro Caliente Tradicional')">🌭 Perro Tradicional</button>
-    <button onclick="pedirWhatsApp('Perro Caliente Especial')">🌭 Perro Especial</button>
-    <button onclick="pedirWhatsApp('Perro Caliente Súper')">🌭 Perro Súper</button>
+    <button onclick="pedirWhatsApp('Perro Tradicional - $10.000')">🌭 Perro Tradicional - $10.000</button>
+    <button onclick="pedirWhatsApp('Perro Especial - $14.000')">🌭 Perro Especial - $14.000</button>
+    <button onclick="pedirWhatsApp('Perro Súper - $18.000')">🌭 Perro Súper - $18.000</button>
     `;
 }
     document.getElementById("opcionesProducto").innerHTML=botones;
