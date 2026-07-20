@@ -49,6 +49,14 @@ if(producto=="Perros Calientes"){
     <button onclick="pedirWhatsApp('Broaster Familiar - $38.000')">🍗 Broaster Familiar - $38.000</button>
     `;
 }
+    if(producto=="Parrilla"){
+    botones=`
+    <button onclick="pedirWhatsApp('Churrasco - $33.900')">🥩 Churrasco - $33.900</button>
+    <button onclick="pedirWhatsApp('Carne de Res - $28.000')">🥩 Carne de Res - $28.000</button>
+    <button onclick="pedirWhatsApp('Carne de Cerdo - $26.000')">🥩 Carne de Cerdo - $26.000</button>
+    <button onclick="pedirWhatsApp('Pechuga a la Parrilla - $27.000')">🍗 Pechuga a la Parrilla - $27.000</button>
+    `;
+}
     document.getElementById("opcionesProducto").innerHTML=botones;
 }
 
