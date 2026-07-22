@@ -49,6 +49,7 @@ if(producto=="Perros Calientes"){
     <button onclick="pedirWhatsApp('Broaster Familiar - $38.000')">🍗 Broaster Familiar - $38.000</button>
     `;
 }
+    if(producto=="Parrilla"){
   botones=`
 <button onclick="pedirWhatsApp('Pincho de Res - $14.000')">🥩 Pincho de Res - $14.000</button>
 <button onclick="pedirWhatsApp('Pincho de Cerdo - $14.000')">🐖 Pincho de Cerdo - $14.000</button>
