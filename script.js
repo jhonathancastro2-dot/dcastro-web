@@ -49,6 +49,18 @@ if(producto=="Perros Calientes"){
     <button onclick="pedirWhatsApp('Broaster Familiar - $38.000')">🍗 Broaster Familiar - $38.000</button>
     `;
 }
+    if (producto == "Bebidas") {
+    botones = `
+    <button onclick="pedirWhatsApp('Gaseosa Personal - $3.500')">🥤 Gaseosa Personal - $3.500</button>
+    <button onclick="pedirWhatsApp('Agua - $2.000')">💧 Agua - $2.000</button>
+    <button onclick="pedirWhatsApp('Jugo en Agua - $6.000')">🧃 Jugo en Agua - $6.000</button>
+    <button onclick="pedirWhatsApp('Jugo en Leche - $10.000')">🥛 Jugo en Leche - $10.000</button>
+    <button onclick="pedirWhatsApp('Limonada Natural - $6.000')">🍋 Limonada Natural - $6.000</button>
+    <button onclick="pedirWhatsApp('Limonada Grande - $12.000')">🍋 Limonada Grande - $12.000</button>
+    <button onclick="pedirWhatsApp('Milo - $6.000')">🍫 Milo - $6.000</button>
+    <button onclick="pedirWhatsApp('Capuchino - $7.000')">☕ Capuchino - $7.000</button>
+    `;
+}
     if (producto == "Almuerzos") {
     botones = `
     <button onclick="pedirWhatsApp('Almuerzo del Día - $10.000')">🍛 Almuerzo del Día - $10.000</button>
