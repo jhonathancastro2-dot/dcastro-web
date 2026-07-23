@@ -69,7 +69,7 @@ if(producto=="Perros Calientes"){
 }
     if(producto=="Parrilla"){
   botones=`
-<button onclick="pedirWhatsApp('Pincho de Res - $14.000')">🥩 Pincho de Res - $14.000</button>
+<button onclick="agregarCarrito('Pincho de Res',14000)">
 <button onclick="pedirWhatsApp('Pincho de Cerdo - $14.000')">🐖 Pincho de Cerdo - $14.000</button>
 <button onclick="pedirWhatsApp('Pincho de Pollo - $14.000')">🍗 Pincho de Pollo - $14.000</button>
 <button onclick="pedirWhatsApp('Churrasco - $33.900')">🥩 Churrasco - $33.900</button>
@@ -91,4 +91,14 @@ function pedirWhatsApp(opcion){
         "https://wa.me/573206564360?text=Hola D'CASTRO, quiero pedir " + encodeURIComponent(opcion),
         "_blank"
     );
+}
+let carrito = [];
+
+function agregarCarrito(nombre, precio) {
+    carrito.push({
+        nombre: nombre,
+        precio: precio
+    });
+
+    alert(nombre + " agregado al carrito");
 }
