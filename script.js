@@ -99,7 +99,27 @@ function agregarCarrito(nombre, precio) {
         nombre: nombre,
         precio: precio 
     });document.getElementById("contadorCarrito").innerText = carrito.length;
+<div id="ventanaCarrito" class="ventana" style="display:none;">
+  <div class="contenido-ventana">
+    <h2>🛒 Mi Pedido</h2>
 
+    <div id="listaCarrito"></div>
+
+    <h3>Total: $<span id="totalCarrito">0</span></h3>
+
+    <button onclick="enviarCarritoWhatsApp()">
+      📲 Enviar por WhatsApp
+    </button>
+
+    <button onclick="vaciarCarrito()">
+      🗑️ Vaciar carrito
+    </button>
+
+    <button onclick="cerrarCarrito()">
+      ❌ Cerrar
+    </button>
+  </div>
+</div>
     alert(nombre + " agregado al carrito.\nProductos en el carrito: " + carrito.length);
 }
 function verCarrito() {
