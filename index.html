@@ -246,6 +246,19 @@ Pedir ahora
     <button onclick="cerrarVentana()">❌ Cerrar</button>
   </div>
 </div>
+        <div id="ventanaCarrito" class="ventana" style="display:none;">
+  <div class="contenido-ventana">
+    <h2>🛒 Mi Pedido</h2>
+
+    <div id="listaCarrito"></div>
+
+    <h3>Total: $<span id="totalCarrito">0</span></h3>
+
+    <button onclick="enviarCarritoWhatsApp()">📲 Enviar por WhatsApp</button>
+    <button onclick="vaciarCarrito()">🗑️ Vaciar carrito</button>
+    <button onclick="cerrarCarrito()">❌ Cerrar</button>
+  </div>
+</div>
         <script src="script.js"></script>
        <button id="carritoBtn" onclick="verCarrito()">
     🛒 <span id="contadorCarrito">0</span>
