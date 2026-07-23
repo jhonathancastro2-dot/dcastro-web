@@ -100,5 +100,5 @@ function agregarCarrito(nombre, precio) {
         precio: precio
     });
 
-    alert(nombre + " agregado al carrito");
+    alert(nombre + " agregado al carrito.\nProductos en el carrito: " + carrito.length);
 }
