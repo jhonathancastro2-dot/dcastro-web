@@ -100,24 +100,8 @@ function agregarCarrito(nombre, precio) {
         precio: precio 
     });document.getElementById("contadorCarrito").innerText = carrito.length;
 alert(nombre + " agregado al carrito.\nProductos en el carrito: " + carrito.length);
-}
 
-    <h3>Total: $<span id="totalCarrito">0</span></h3>
-
-    <button onclick="enviarCarritoWhatsApp()">
-      📲 Enviar por WhatsApp
-    </button>
-
-    <button onclick="vaciarCarrito()">
-      🗑️ Vaciar carrito
-    </button>
-
-    <button onclick="cerrarCarrito()">
-      ❌ Cerrar
-    </button>
-  </div>
-</div>
-    alert(nombre + " agregado al carrito.\nProductos en el carrito: " + carrito.length);
+alert(nombre + " agregado al carrito.\nProductos en el carrito: " + carrito.length);
 }
 function verCarrito() {
     let lista = "";
