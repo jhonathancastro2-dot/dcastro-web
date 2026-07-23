@@ -97,8 +97,8 @@ let carrito = [];
 function agregarCarrito(nombre, precio) {
     carrito.push({
         nombre: nombre,
-        precio: precio
-    });
+        precio: precio 
+    });document.getElementById("contadorCarrito").innerText = carrito.length;
 
     alert(nombre + " agregado al carrito.\nProductos en el carrito: " + carrito.length);
 }
