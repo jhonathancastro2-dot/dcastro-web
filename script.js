@@ -99,11 +99,8 @@ function agregarCarrito(nombre, precio) {
         nombre: nombre,
         precio: precio 
     });document.getElementById("contadorCarrito").innerText = carrito.length;
-<div id="ventanaCarrito" class="ventana" style="display:none;">
-  <div class="contenido-ventana">
-    <h2>🛒 Mi Pedido</h2>
-
-    <div id="listaCarrito"></div>
+alert(nombre + " agregado al carrito.\nProductos en el carrito: " + carrito.length);
+}
 
     <h3>Total: $<span id="totalCarrito">0</span></h3>
 
@@ -123,5 +120,20 @@ function agregarCarrito(nombre, precio) {
     alert(nombre + " agregado al carrito.\nProductos en el carrito: " + carrito.length);
 }
 function verCarrito() {
-    alert("Productos en el carrito: " + carrito.length);
+    let lista = "";
+    let total = 0;
+
+    carrito.forEach(function(item) {
+        lista += "<p>• " + item.nombre + " - $" + item.precio.toLocaleString() + "</p>";
+        total += item.precio;
+    });
+
+    document.getElementById("listaCarrito").innerHTML = lista;
+    document.getElementById("totalCarrito").innerText = total.toLocaleString();
+
+    document.getElementById("ventanaCarrito").style.display = "flex";
+}
+
+function cerrarCarrito() {
+    document.getElementById("ventanaCarrito").style.display = "none";
 }
