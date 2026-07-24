@@ -101,7 +101,7 @@ function agregarCarrito(nombre, precio) {
     });document.getElementById("contadorCarrito").innerText = carrito.length;
 alert(nombre + " agregado al carrito.\nProductos en el carrito: " + carrito.length);
 
-verCarrito();
+alert("Llegó hasta aquí");
 }
 
 }
