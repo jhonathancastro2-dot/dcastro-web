@@ -1,4 +1,3 @@
-
 function verOpciones(producto){
 
     document.getElementById("ventanaMenu").style.display="flex";
