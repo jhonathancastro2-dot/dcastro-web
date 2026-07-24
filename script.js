@@ -109,21 +109,21 @@ function verCarrito() {
     let lista = "";
     let total = 0;
 
-    carrito.forEach(function(item) {
-       lista += `
-<div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #ddd;">
-    <span>${item.nombre}</span>
-    <strong>$${item.precio.toLocaleString()}</strong>
-</div>`;
-        total += item.precio;
-    });
+    if (carrito.length === 0) {
+        lista = "<p style='text-align:center;color:gray;'>Tu carrito está vacío.</p>";
+    } else {
+        carrito.forEach(function(item) {
+            lista += `
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #ddd;">
+                <span>${item.nombre}</span>
+                <strong>$${item.precio.toLocaleString()}</strong>
+            </div>`;
+            total += item.precio;
+        });
+    }
 
     document.getElementById("listaCarrito").innerHTML = lista;
     document.getElementById("totalCarrito").innerText = total.toLocaleString();
-if (carrito.length === 0) {
-    document.getElementById("listaCarrito").innerHTML =
-        "<p style='text-align:center;color:gray;'>Tu carrito está vacío.</p>";
-}
     document.getElementById("ventanaCarrito").style.display = "flex";
 }
 
