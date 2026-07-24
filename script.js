@@ -104,7 +104,7 @@ alert(nombre + " agregado al carrito.\nProductos en el carrito: " + carrito.leng
 alert("Llegó hasta aquí");
 }
 
-}
+
 function verCarrito() {
     let lista = "";
     let total = 0;
