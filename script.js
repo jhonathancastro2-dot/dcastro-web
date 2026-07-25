@@ -205,10 +205,4 @@ function enviarCarritoWhatsApp() {
     );
 }
 
-    mensaje += "%0A%0A💰 Total: $" + total.toLocaleString();
-
-    window.open(
-        "https://wa.me/573206564360?text=" + mensaje,
-        "_blank"
-    );
-}
+    
