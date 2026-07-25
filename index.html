@@ -253,7 +253,10 @@ Pedir ahora
     <div id="listaCarrito"></div>
 
     <h3>Total: $<span id="totalCarrito">0</span></h3>
-
+<label>
+    <input type="checkbox" id="domicilio" onchange="verCarrito()">
+    🚚 Agregar domicilio ($5.000)
+</label>
     <button onclick="enviarCarritoWhatsApp()">📲 Enviar por WhatsApp</button>
     <button onclick="vaciarCarrito()">🗑️ Vaciar carrito</button>
     <button onclick="cerrarCarrito()">❌ Cerrar</button>
