@@ -124,10 +124,13 @@ function verCarrito() {
         carrito.forEach(function(item) {
             lista += `
             <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #ddd;">
-             <span>${item.nombre}</span>
-<strong>$${item.precio.toLocaleString()}</strong>
+             lista += `
+<div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #ddd;">
+    <span>${articulo.nombre} x ${articulo.cantidad}</span>
+    <strong>$${(articulo.precio * articulo.cantidad).toLocaleString()}</strong>
+</div>`;
             </div>`;
-            total += item.precio;
+          total += articulo.precio * articulo.cantidad;
         });
     }
 
