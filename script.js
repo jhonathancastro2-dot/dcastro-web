@@ -95,13 +95,22 @@ function pedirWhatsApp(opcion){
 let carrito = [];
 
 function agregarCarrito(nombre, precio) {
-    carrito.push({
-        nombre: nombre,
-        precio: precio 
-    });document.getElementById("contadorCarrito").innerText = carrito.length;
-alert(nombre + " agregado al carrito.\nProductos en el carrito: " + carrito.length);
 
-verCarrito();
+    let existe = carrito.find(item => item.nombre === nombre);
+
+    if (existe) {
+        existe.cantidad++;
+    } else {
+        carrito.push({
+            nombre: nombre,
+            precio: precio,
+            cantidad: 1
+        });
+    }
+
+    document.getElementById("contadorCarrito").innerText = carrito.length;
+
+    verCarrito();
 }
 
 
