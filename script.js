@@ -115,25 +115,40 @@ function agregarCarrito(nombre, precio) {
 
 
 function verCarrito() {
+
     let lista = "";
     let total = 0;
 
     if (carrito.length === 0) {
+
         lista = "<p style='text-align:center;color:gray;'>Tu carrito está vacío.</p>";
+
     } else {
-        carrito.forEach(function(item) {
+
+        carrito.forEach(function(item){
+
             lista += `
             <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #ddd;">
-             lista += `
-<div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #ddd;">
-    <span>${articulo.nombre} x ${articulo.cantidad}</span>
-    <strong>$${(articulo.precio * articulo.cantidad).toLocaleString()}</strong>
-</div>`;
+                <span>${item.nombre} x ${item.cantidad}</span>
+                <strong>$${(item.precio * item.cantidad).toLocaleString()}</strong>
             </div>`;
-          total += articulo.precio * articulo.cantidad;
+
+            total += item.precio * item.cantidad;
+
         });
+
     }
 
+    document.getElementById("listaCarrito").innerHTML = lista;
+
+    if (document.getElementById("domicilio").checked) {
+        total += 3000;
+    }
+
+    document.getElementById("totalCarrito").innerText = total.toLocaleString();
+
+    document.getElementById("ventanaCarrito").style.display = "flex";
+}
     document.getElementById("listaCarrito").innerHTML = lista;
     if (document.getElementById("domicilio").checked) {
     total += 3000;
