@@ -135,8 +135,17 @@ function verCarrito() {
 
             lista += `
             <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #ddd;">
-                <span>${item.nombre} x ${item.cantidad}</span>
-                <strong>$${(item.precio * item.cantidad).toLocaleString()}</strong>
+              <div style="flex:1;">
+    <strong>${item.nombre}</strong><br>
+
+    <button onclick="cambiarCantidad('${item.nombre}',-1)">➖</button>
+
+    <strong style="margin:0 10px;">${item.cantidad}</strong>
+
+    <button onclick="cambiarCantidad('${item.nombre}',1)">➕</button>
+</div>
+
+<strong>$${(item.precio * item.cantidad).toLocaleString()}</strong>
             </div>`;
 
             total += item.precio * item.cantidad;
@@ -167,21 +176,28 @@ function vaciarCarrito() {
     verCarrito();
 }
 function enviarCarritoWhatsApp() {
-    let mensaje = "Hola D'CASTRO, quiero pedir:%0A%0A";
+
+    let mensaje = "🍽️ Hola D'CASTRO, quiero pedir:%0A%0A";
     let total = 0;
 
-    carrito.forEach(function(item) {
+    carrito.forEach(function(item){
 
-    let subtotal = item.precio * item.cantidad;
+        let subtotal = item.precio * item.cantidad;
 
-    mensaje += "• " + item.nombre +
-               " x " + item.cantidad +
-               " - $" + subtotal.toLocaleString() + "%0A";
+        mensaje += "• " + item.nombre +
+                   " x" + item.cantidad +
+                   " = $" + subtotal.toLocaleString() + "%0A";
 
-    total += subtotal;
-});
+        total += subtotal;
 
-    mensaje += "%0ATotal: $" + total;
+    });
+
+    if(document.getElementById("domicilio").checked){
+        mensaje += "%0A🚚 Domicilio: $3.000";
+        total += 3000;
+    }
+
+    mensaje += "%0A%0A💰 Total: $" + total.toLocaleString();
 
     window.open(
         "https://wa.me/573206564360?text=" + mensaje,
