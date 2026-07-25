@@ -149,13 +149,8 @@ function verCarrito() {
 
     document.getElementById("ventanaCarrito").style.display = "flex";
 }
-    document.getElementById("listaCarrito").innerHTML = lista;
-    if (document.getElementById("domicilio").checked) {
-    total += 3000;
-}
-    document.getElementById("totalCarrito").innerText = total.toLocaleString();
-    document.getElementById("ventanaCarrito").style.display = "flex";
-}
+    
+
 
 function cerrarCarrito() {
     document.getElementById("ventanaCarrito").style.display = "none";
