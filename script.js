@@ -192,13 +192,18 @@ function enviarCarritoWhatsApp() {
 
     });
 
-    let domicilio = document.getElementById("domicilio");
-
-if (domicilio && domicilio.checked) {
-    mensaje += "%0A🚚 Domicilio: $3.000";
-    total = total + 3000;
-}
+    if (document.getElementById("domicilio").checked) {
+        mensaje += "• Domicilio = $3.000%0A";
+        total += 3000;
     }
+
+    mensaje += "%0A💰 Total: $" + total.toLocaleString();
+
+    window.open(
+        "https://wa.me/573206564360?text=" + mensaje,
+        "_blank"
+    );
+}
 
     mensaje += "%0A%0A💰 Total: $" + total.toLocaleString();
 
