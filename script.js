@@ -123,6 +123,9 @@ function verCarrito() {
     }
 
     document.getElementById("listaCarrito").innerHTML = lista;
+    if (document.getElementById("domicilio").checked) {
+    total += 5000;
+}
     document.getElementById("totalCarrito").innerText = total.toLocaleString();
     document.getElementById("ventanaCarrito").style.display = "flex";
 }
