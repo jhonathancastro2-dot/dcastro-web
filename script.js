@@ -130,3 +130,8 @@ function verCarrito() {
 function cerrarCarrito() {
     document.getElementById("ventanaCarrito").style.display = "none";
 }
+function vaciarCarrito() {
+    carrito = [];
+    document.getElementById("contadorCarrito").innerText = "0";
+    verCarrito();
+}
