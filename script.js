@@ -192,9 +192,12 @@ function enviarCarritoWhatsApp() {
 
     });
 
-    if(document.getElementById("domicilio").checked){
-        mensaje += "%0A🚚 Domicilio: $3.000";
-        total += 3000;
+    let domicilio = document.getElementById("domicilio");
+
+if (domicilio && domicilio.checked) {
+    mensaje += "%0A🚚 Domicilio: $3.000";
+    total = total + 3000;
+}
     }
 
     mensaje += "%0A%0A💰 Total: $" + total.toLocaleString();
