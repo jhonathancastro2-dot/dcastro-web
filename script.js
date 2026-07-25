@@ -108,7 +108,13 @@ function agregarCarrito(nombre, precio) {
         });
     }
 
-    document.getElementById("contadorCarrito").innerText = carrito.length;
+    let cantidadTotal = 0;
+
+carrito.forEach(function(item){
+    cantidadTotal += item.cantidad;
+});
+
+document.getElementById("contadorCarrito").innerText = cantidadTotal;
 
     verCarrito();
 }
