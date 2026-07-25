@@ -115,8 +115,8 @@ function verCarrito() {
         carrito.forEach(function(item) {
             lista += `
             <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #ddd;">
-              <span>PINCHO DE RES</span>
-<strong>$14.000</strong>
+             <span>${item.nombre}</span>
+<strong>$${item.precio.toLocaleString()}</strong>
             </div>`;
             total += item.precio;
         });
