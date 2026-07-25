@@ -171,9 +171,15 @@ function enviarCarritoWhatsApp() {
     let total = 0;
 
     carrito.forEach(function(item) {
-        mensaje += "• " + item.nombre + " - $" + item.precio + "%0A";
-        total += item.precio;
-    });
+
+    let subtotal = item.precio * item.cantidad;
+
+    mensaje += "• " + item.nombre +
+               " x " + item.cantidad +
+               " - $" + subtotal.toLocaleString() + "%0A";
+
+    total += subtotal;
+});
 
     mensaje += "%0ATotal: $" + total;
 
