@@ -135,3 +135,19 @@ function vaciarCarrito() {
     document.getElementById("contadorCarrito").innerText = "0";
     verCarrito();
 }
+function enviarCarritoWhatsApp() {
+    let mensaje = "Hola D'CASTRO, quiero pedir:%0A%0A";
+    let total = 0;
+
+    carrito.forEach(function(item) {
+        mensaje += "• " + item.nombre + " - $" + item.precio + "%0A";
+        total += item.precio;
+    });
+
+    mensaje += "%0ATotal: $" + total;
+
+    window.open(
+        "https://wa.me/573206564360?text=" + mensaje,
+        "_blank"
+    );
+}
