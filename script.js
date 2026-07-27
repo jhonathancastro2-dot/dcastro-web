@@ -235,7 +235,7 @@ if (document.getElementById("domicilio").checked) {
     mensaje += "%0A💳 Forma de pago: " + formaPago;
 
     if (ubicacion != "") {
-        mensaje += "%0A📌 Ubicación: " + ubicacion;
+        mensaje += "%0A🗺️ Abrir ubicación:%0A" + ubicacion;
     }
 
 }
@@ -286,7 +286,7 @@ function obtenerUbicacion() {
             let lat = posicion.coords.latitude;
             let lon = posicion.coords.longitude;
 
-            let enlace = "https://maps.google.com/?q=" + lat + "," + lon;
+           let enlace = "https://www.google.com/maps/search/?api=1&query=" + lat + "," + lon;
 
             document.getElementById("ubicacion").value = enlace;
 
