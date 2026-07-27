@@ -269,6 +269,43 @@ function cambiarCantidad(nombre, cambio) {
     verCarrito();
 }
 function obtenerUbicacion() {
+
+    if (!navigator.geolocation) {
+        document.getElementById("estadoGPS").innerText =
+            "Tu dispositivo no admite GPS.";
+        return;
+    }
+
+    document.getElementById("estadoGPS").innerText =
+        "📍 Obteniendo ubicación...";
+
+    navigator.geolocation.getCurrentPosition(
+
+        function(posicion) {
+
+            let lat = posicion.coords.latitude;
+            let lon = posicion.coords.longitude;
+
+            let enlace = "https://maps.google.com/?q=" + lat + "," + lon;
+
+            document.getElementById("ubicacion").value = enlace;
+
+            document.getElementById("estadoGPS").innerText =
+                "✅ Ubicación obtenida correctamente.";
+
+        },
+
+        function() {
+
+            document.getElementById("estadoGPS").innerText =
+                "❌ No fue posible obtener la ubicación.";
+
+        }
+
+    );
+
+}
+function obtenerUbicacion() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(posicion) {
 
