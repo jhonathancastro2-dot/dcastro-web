@@ -161,7 +161,11 @@ function verCarrito() {
     }
 
     document.getElementById("totalCarrito").innerText = total.toLocaleString();
-
+if (document.getElementById("domicilio").checked) {
+    document.getElementById("datosDomicilio").style.display = "block";
+} else {
+    document.getElementById("datosDomicilio").style.display = "none";
+}
     document.getElementById("ventanaCarrito").style.display = "flex";
 }
     
