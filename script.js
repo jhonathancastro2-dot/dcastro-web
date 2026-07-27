@@ -179,9 +179,12 @@ function vaciarCarrito() {
     document.getElementById("contadorCarrito").innerText = "0";
     verCarrito();
 }
+let numeroPedido = localStorage.getItem("numeroPedido") || 1;
 function enviarCarritoWhatsApp() {
 
-    let mensaje = "🍽️ Hola D'CASTRO, quiero pedir:%0A%0A";
+   let mensaje = "🍽️ *NUEVO PEDIDO D'CASTRO*%0A%0A";
+
+mensaje += "🧾 Pedido No. " + numeroPedido + "%0A";
     let total = 0;
     let direccion = document.getElementById("direccion").value;
     let nombre = document.getElementById("nombreCliente").value;
@@ -249,6 +252,8 @@ if (document.getElementById("domicilio").checked) {
         "_blank"
     );
 }
+numeroPedido++;
+localStorage.setItem("numeroPedido", numeroPedido);
 function cambiarCantidad(nombre, cambio) {
 
     let item = carrito.find(p => p.nombre === nombre);
