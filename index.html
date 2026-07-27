@@ -257,6 +257,27 @@ Pedir ahora
     <input type="checkbox" id="domicilio" onchange="verCarrito()">
 Solicitar domicilio (+$3.000)
 </label>
+      <div id="datosDomicilio" style="display:none; margin-top:15px;">
+
+    <input type="text"
+           id="direccion"
+           placeholder="📍 Dirección completa"
+           style="width:100%;padding:10px;margin:8px 0;">
+
+    <input type="text"
+           id="referencia"
+           placeholder="🏠 Referencia (casa, barrio, color, etc.)"
+           style="width:100%;padding:10px;margin:8px 0;">
+
+    <input type="hidden" id="ubicacion">
+
+    <button type="button" onclick="obtenerUbicacion()">
+        📍 Compartir mi ubicación GPS
+    </button>
+
+    <small id="estadoGPS"></small>
+
+</div>
     <button onclick="enviarCarritoWhatsApp()">📲 Enviar por WhatsApp</button>
     <button onclick="vaciarCarrito()">🗑️ Vaciar carrito</button>
     <button onclick="cerrarCarrito()">❌ Cerrar</button>
