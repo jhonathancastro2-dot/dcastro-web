@@ -252,5 +252,19 @@ function cambiarCantidad(nombre, cambio) {
 
     verCarrito();
 }
+function obtenerUbicacion() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(posicion) {
 
+            document.getElementById("ubicacion").value =
+                posicion.coords.latitude + "," + posicion.coords.longitude;
+
+        }, function() {
+            alert("No fue posible obtener la ubicación.");
+        });
+
+    } else {
+        alert("Tu navegador no soporta GPS.");
+    }
+}
     
