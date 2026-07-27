@@ -184,10 +184,13 @@ function enviarCarritoWhatsApp() {
     let mensaje = "🍽️ Hola D'CASTRO, quiero pedir:%0A%0A";
     let total = 0;
     let direccion = document.getElementById("direccion").value;
+    let nombre = document.getElementById("nombreCliente").value;
+let telefono = document.getElementById("telefonoCliente").value;
 let referencia = document.getElementById("referencia").value;
 let formaPago = document.getElementById("formaPago").value;
 let ubicacion = document.getElementById("ubicacion").value;
-
+mensaje += "👤 Cliente: " + nombre + "%0A";
+mensaje += "📞 Teléfono: " + telefono + "%0A%0A";
     carrito.forEach(function(item){
 
         let subtotal = item.precio * item.cantidad;
