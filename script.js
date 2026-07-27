@@ -183,6 +183,10 @@ function enviarCarritoWhatsApp() {
 
     let mensaje = "🍽️ Hola D'CASTRO, quiero pedir:%0A%0A";
     let total = 0;
+    let direccion = document.getElementById("direccion").value;
+let referencia = document.getElementById("referencia").value;
+let formaPago = document.getElementById("formaPago").value;
+let ubicacion = document.getElementById("ubicacion").value;
 
     carrito.forEach(function(item){
 
@@ -222,7 +226,19 @@ function enviarCarritoWhatsApp() {
 
     verCarrito();
 }
+if (document.getElementById("domicilio").checked) {
 
+    mensaje += "%0A📍 Dirección: " + direccion;
+
+    mensaje += "%0A🏠 Referencia: " + referencia;
+
+    mensaje += "%0A💳 Forma de pago: " + formaPago;
+
+    if (ubicacion != "") {
+        mensaje += "%0A📌 Ubicación: " + ubicacion;
+    }
+
+}
     mensaje += "%0A💰 Total: $" + total.toLocaleString();
 
     window.open(
