@@ -1,3 +1,4 @@
+let numeroPedido = localStorage.getItem("numeroPedido") || 1;
 function verOpciones(producto){
 
     document.getElementById("ventanaMenu").style.display="flex";
@@ -182,7 +183,8 @@ function vaciarCarrito() {
 let numeroPedido = localStorage.getItem("numeroPedido") || 1;
 function enviarCarritoWhatsApp() {
 
-   let mensaje = "🍽️ *NUEVO PEDIDO D'CASTRO*%0A%0A";
+   let mensaje = "📦 *NUEVO PEDIDO D'CASTRO*%0A%0A";
+mensaje += "🧾 Pedido No. " + numeroPedido + "%0A";
 
 mensaje += "🧾 Pedido No. " + numeroPedido + "%0A";
     let total = 0;
@@ -251,7 +253,10 @@ if (document.getElementById("domicilio").checked) {
         "https://wa.me/573206564360?text=" + mensaje,
         "_blank"
     );
+    numeroPedido++;
+localStorage.setItem("numeroPedido", numeroPedido);
 }
+
 numeroPedido++;
 localStorage.setItem("numeroPedido", numeroPedido);
 function cambiarCantidad(nombre, cambio) {
