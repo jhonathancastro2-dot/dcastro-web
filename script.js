@@ -119,7 +119,6 @@ document.getElementById("contadorCarrito").innerText = cantidadTotal;
     verCarrito();
 }
 
-
 function verCarrito() {
 
     let lista = "";
@@ -135,17 +134,17 @@ function verCarrito() {
 
             lista += `
             <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #ddd;">
-              <div style="flex:1;">
-    <strong>${item.nombre}</strong><br>
+                <div style="flex:1;">
+                    <strong>${item.nombre}</strong><br>
 
-    <button onclick="cambiarCantidad('${item.nombre}',-1)">➖</button>
+                    <button onclick="cambiarCantidad('${item.nombre}',-1)">➖</button>
 
-    <strong style="margin:0 10px;">${item.cantidad}</strong>
+                    <strong style="margin:0 10px;">${item.cantidad}</strong>
 
-    <button onclick="cambiarCantidad('${item.nombre}',1)">➕</button>
-</div>
+                    <button onclick="cambiarCantidad('${item.nombre}',1)">➕</button>
+                </div>
 
-<strong>$${(item.precio * item.cantidad).toLocaleString()}</strong>
+                <strong>$${(item.precio * item.cantidad).toLocaleString()}</strong>
             </div>`;
 
             total += item.precio * item.cantidad;
@@ -156,16 +155,17 @@ function verCarrito() {
 
     document.getElementById("listaCarrito").innerHTML = lista;
 
-    if (document.getElementById("domicilio").checked) {
+    let domicilio = document.getElementById("domicilio").checked;
+
+    document.getElementById("datosDomicilio").style.display =
+        domicilio ? "block" : "none";
+
+    if (domicilio) {
         total += 3000;
     }
 
     document.getElementById("totalCarrito").innerText = total.toLocaleString();
-if (document.getElementById("domicilio").checked) {
-    document.getElementById("datosDomicilio").style.display = "block";
-} else {
-    document.getElementById("datosDomicilio").style.display = "none";
-}
+
     document.getElementById("ventanaCarrito").style.display = "flex";
 }
     
