@@ -212,28 +212,7 @@ mensaje += "📞 Teléfono: " + telefono + "%0A%0A";
         mensaje += "• Domicilio = $3.000%0A";
         total += 3000;
     }
-    function cambiarCantidad(nombre, cambio) {
-
-    let item = carrito.find(p => p.nombre === nombre);
-
-    if (!item) return;
-
-    item.cantidad += cambio;
-
-    if (item.cantidad <= 0) {
-        carrito = carrito.filter(p => p.nombre !== nombre);
-    }
-
-    let cantidadTotal = 0;
-
-    carrito.forEach(function(p){
-        cantidadTotal += p.cantidad;
-    });
-
-    document.getElementById("contadorCarrito").innerText = cantidadTotal;
-
-    verCarrito();
-}
+ 
 if (document.getElementById("domicilio").checked) {
 
     mensaje += "%0A📍 Dirección: " + direccion;
