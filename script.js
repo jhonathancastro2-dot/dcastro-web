@@ -376,7 +376,7 @@ function vaciarCarrito() {
     document.getElementById("contadorCarrito").innerText = "0";
     verCarrito();
 }
-let numeroPedido = localStorage.getItem("numeroPedido") || 1;
+let numeroPedido = parseInt(localStorage.getItem("numeroPedido")) || 1;
 function enviarCarritoWhatsApp() {
 
    let mensaje = "📦 *NUEVO PEDIDO D'CASTRO*%0A%0A";
@@ -423,7 +423,29 @@ if (document.getElementById("domicilio").checked) {
 
 }
     mensaje += "%0A💰 Total: $" + total.toLocaleString();
+if (carrito.length == 0){
+    alert("El carrito está vacío.");
+    return;
+}
 
+if(document.getElementById("domicilio").checked){
+
+    if(nombre.trim()==""){
+        alert("Ingrese el nombre del cliente");
+        return;
+    }
+
+    if(telefono.trim()==""){
+        alert("Ingrese el teléfono");
+        return;
+    }
+
+    if(direccion.trim()==""){
+        alert("Ingrese la dirección");
+        return;
+    }
+
+}
     window.open(
         "https://wa.me/573206564360?text=" + mensaje,
         "_blank"
