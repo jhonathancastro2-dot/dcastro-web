@@ -186,7 +186,7 @@ function enviarCarritoWhatsApp() {
    let mensaje = "📦 *NUEVO PEDIDO D'CASTRO*%0A%0A";
 mensaje += "🧾 Pedido No. " + numeroPedido + "%0A";
 
-mensaje += "🧾 Pedido No. " + numeroPedido + "%0A";
+
     let total = 0;
     let direccion = document.getElementById("direccion").value;
     let nombre = document.getElementById("nombreCliente").value;
