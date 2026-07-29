@@ -1,4 +1,4 @@
-let numeroPedido = localStorage.getItem("numeroPedido") || 1;
+let numeroPedido = parseInt(localStorage.getItem("numeroPedido")) || 1;
 function verOpciones(producto){
 
     document.getElementById("ventanaMenu").style.display="flex";
@@ -194,7 +194,7 @@ let telefono = document.getElementById("telefonoCliente").value;
 let referencia = document.getElementById("referencia").value;
 let formaPago = document.getElementById("formaPago").value;
 let ubicacion = document.getElementById("ubicacion").value;
-    let numeroPedido = localStorage.getItem("numeroPedido") || 1;
+  
 function verOpciones(producto){
 
     document.getElementById("ventanaMenu").style.display="flex";
@@ -376,7 +376,7 @@ function vaciarCarrito() {
     document.getElementById("contadorCarrito").innerText = "0";
     verCarrito();
 }
-let numeroPedido = parseInt(localStorage.getItem("numeroPedido")) || 1;
+
 function enviarCarritoWhatsApp() {
 
    let mensaje = "📦 *NUEVO PEDIDO D'CASTRO*%0A%0A";
