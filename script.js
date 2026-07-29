@@ -236,9 +236,6 @@ if (document.getElementById("domicilio").checked) {
 localStorage.setItem("numeroPedido", numeroPedido);
 }
 
-numeroPedido++;
-localStorage.setItem("numeroPedido", numeroPedido);
-
 function obtenerUbicacion() {
 
     if (!navigator.geolocation) {
