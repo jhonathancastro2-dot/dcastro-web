@@ -570,3 +570,25 @@ function obtenerUbicacion() {
     );
 
 }
+function cambiarCantidad(nombre, cambio) {
+
+    let item = carrito.find(p => p.nombre === nombre);
+
+    if (!item) return;
+
+    item.cantidad += cambio;
+
+    if (item.cantidad <= 0) {
+        carrito = carrito.filter(p => p.nombre !== nombre);
+    }
+
+    let cantidadTotal = 0;
+
+    carrito.forEach(function(item) {
+        cantidadTotal += item.cantidad;
+    });
+
+    document.getElementById("contadorCarrito").innerText = cantidadTotal;
+
+    verCarrito();
+}
