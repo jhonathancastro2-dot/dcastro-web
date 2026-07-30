@@ -107,7 +107,7 @@ function pedirWhatsApp(opcion){
         "_blank"
     );
 }
-let carrito = [];
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 function agregarCarrito(nombre, precio) {
 
@@ -130,7 +130,7 @@ carrito.forEach(function(item){
 });
 
 document.getElementById("contadorCarrito").innerText = cantidadTotal;
-
+localStorage.setItem("carrito", JSON.stringify(carrito));
     verCarrito();
 }
 
@@ -191,6 +191,7 @@ function cerrarCarrito() {
 }
 function vaciarCarrito() {
     carrito = [];
+    localStorage.setItem("carrito", JSON.stringify(carrito));
     document.getElementById("contadorCarrito").innerText = "0";
     verCarrito();
 }
@@ -603,6 +604,6 @@ function cambiarCantidad(nombre, cambio) {
     });
 
     document.getElementById("contadorCarrito").innerText = cantidadTotal;
-
+localStorage.setItem("carrito", JSON.stringify(carrito));
     verCarrito();
 }
