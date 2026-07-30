@@ -61,8 +61,7 @@ if(producto=="Perros Calientes"){
 <button onclick="agregarCarrito('Broaster Familiar',38000)">🍗 Broaster Familiar - $38.000</button>
     `;
 }
-    if (producto == "Bebidas") {
-    botones = `
+    
     if (producto == "Bebidas") {
     botones = `
     <button onclick="agregarCarrito('Gaseosa Personal',3500)">🥤 Gaseosa Personal - $3.500</button>
@@ -75,8 +74,7 @@ if(producto=="Perros Calientes"){
     <button onclick="agregarCarrito('Capuchino',7000)">☕ Capuchino - $7.000</button>
     `;
 }
-    `;
-}
+    
     if (producto == "Almuerzos") {
     botones = `
     <button onclick="agregarCarrito('Almuerzo del Día',10000)">🍛 Almuerzo del Día - $10.000</button>
