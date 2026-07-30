@@ -16,56 +16,72 @@ function verOpciones(producto){
 
     if(producto=="Hamburguesas"){
         botones=`
-        <button onclick="pedirWhatsApp('Hamburguesa Clásica - $15.000')">🍔 Clásica - $15.000</button>
-        <button onclick="pedirWhatsApp('Hamburguesa Especial - $18.000')">🍔 Especial - $18.000</button>
-        <button onclick="pedirWhatsApp('Hamburguesa Doble - $22.000')">🍔 Doble - $22.000</button>
+        <button onclick="agregarCarrito('Hamburguesa Clásica',15000)">🍔 Clásica - $15.000</button>
+
+<button onclick="agregarCarrito('Hamburguesa Especial',18000)">🍔 Especial - $18.000</button>
+
+<button onclick="agregarCarrito('Hamburguesa Doble',22000)">🍔 Doble - $22.000</button>
         `;
     }
 if(producto=="Perros Calientes"){
     botones=`
-    <button onclick="pedirWhatsApp('Perro Tradicional - $10.000')">🌭 Perro Tradicional - $10.000</button>
-    <button onclick="pedirWhatsApp('Perro Especial - $14.000')">🌭 Perro Especial - $14.000</button>
-    <button onclick="pedirWhatsApp('Perro Súper - $18.000')">🌭 Perro Súper - $18.000</button>
+    <button onclick="agregarCarrito('Hamburguesa Clásica',15000)">🍔 Clásica - $15.000</button>
+
+<button onclick="agregarCarrito('Hamburguesa Especial',18000)">🍔 Especial - $18.000</button>
+
+<button onclick="agregarCarrito('Hamburguesa Doble',22000)">🍔 Doble - $22.000</button>
     `;
 }
     if(producto=="Sandwiches"){
     botones=`
-    <button onclick="pedirWhatsApp('Sándwich Cubano - $13.000')">🥪 Sándwich Cubano - $13.000</button>
-    <button onclick="pedirWhatsApp('Sándwich Especial - $16.000')">🥪 Sándwich Especial - $16.000</button>
-    <button onclick="pedirWhatsApp('Sándwich Doble - $20.000')">🥪 Sándwich Doble - $20.000</button>
+   <button onclick="agregarCarrito('Sándwich Cubano',13000)">🥪 Sándwich Cubano - $13.000</button>
+
+<button onclick="agregarCarrito('Sándwich Especial',16000)">🥪 Sándwich Especial - $16.000</button>
+
+<button onclick="agregarCarrito('Sándwich Doble',20000)">🥪 Sándwich Doble - $20.000</button>
     `;
 }
     if(producto=="Salchipapas"){
     botones=`
-    <button onclick="pedirWhatsApp('Salchipapa Personal - $12.000')">🍟 Salchipapa Personal - $12.000</button>
-    <button onclick="pedirWhatsApp('Salchipapa Especial - $18.000')">🍟 Salchipapa Especial - $18.000</button>
-    <button onclick="pedirWhatsApp('Salchipapa Mixta - $25.000')">🍟 Salchipapa Mixta - $25.000</button>
+   <button onclick="agregarCarrito('Salchipapa Personal',12000)">🍟 Salchipapa Personal - $12.000</button>
+
+<button onclick="agregarCarrito('Salchipapa Especial',18000)">🍟 Salchipapa Especial - $18.000</button>
+
+<button onclick="agregarCarrito('Salchipapa Mixta',25000)">🍟 Salchipapa Mixta - $25.000</button>
     `;
 }
     if(producto=="Pollo Broaster"){
     botones=`
-    <button onclick="pedirWhatsApp('1 Presa Broaster - $5.000')">🍗 1 Presa - $5.000</button>
-    <button onclick="pedirWhatsApp('2 Presas Broaster + Papas + Gaseosa - $14.000')">🍗 2 Presas + Papas + Gaseosa - $14.000</button>
-    <button onclick="pedirWhatsApp('4 Presas Broaster - $20.000')">🍗 4 Presas - $20.000</button>
-    <button onclick="pedirWhatsApp('Broaster Familiar - $38.000')">🍗 Broaster Familiar - $38.000</button>
+    <button onclick="agregarCarrito('1 Presa Broaster',5000)">🍗 1 Presa - $5.000</button>
+
+<button onclick="agregarCarrito('2 Presas Broaster + Papas + Gaseosa',14000)">🍗 2 Presas + Papas + Gaseosa - $14.000</button>
+
+<button onclick="agregarCarrito('4 Presas Broaster',20000)">🍗 4 Presas - $20.000</button>
+
+<button onclick="agregarCarrito('Broaster Familiar',38000)">🍗 Broaster Familiar - $38.000</button>
     `;
 }
     if (producto == "Bebidas") {
     botones = `
-    <button onclick="pedirWhatsApp('Gaseosa Personal - $3.500')">🥤 Gaseosa Personal - $3.500</button>
-    <button onclick="pedirWhatsApp('Agua - $2.000')">💧 Agua - $2.000</button>
-    <button onclick="pedirWhatsApp('Jugo en Agua - $6.000')">🧃 Jugo en Agua - $6.000</button>
-    <button onclick="pedirWhatsApp('Jugo en Leche - $10.000')">🥛 Jugo en Leche - $10.000</button>
-    <button onclick="pedirWhatsApp('Limonada Natural - $6.000')">🍋 Limonada Natural - $6.000</button>
-    <button onclick="pedirWhatsApp('Limonada Grande - $12.000')">🍋 Limonada Grande - $12.000</button>
-    <button onclick="pedirWhatsApp('Milo - $6.000')">🍫 Milo - $6.000</button>
-    <button onclick="pedirWhatsApp('Capuchino - $7.000')">☕ Capuchino - $7.000</button>
+    if (producto == "Bebidas") {
+    botones = `
+    <button onclick="agregarCarrito('Gaseosa Personal',3500)">🥤 Gaseosa Personal - $3.500</button>
+    <button onclick="agregarCarrito('Agua',2000)">💧 Agua - $2.000</button>
+    <button onclick="agregarCarrito('Jugo en Agua',6000)">🧃 Jugo en Agua - $6.000</button>
+    <button onclick="agregarCarrito('Jugo en Leche',10000)">🥛 Jugo en Leche - $10.000</button>
+    <button onclick="agregarCarrito('Limonada Natural',6000)">🍋 Limonada Natural - $6.000</button>
+    <button onclick="agregarCarrito('Limonada Grande',12000)">🍋 Limonada Grande - $12.000</button>
+    <button onclick="agregarCarrito('Milo',6000)">🍫 Milo - $6.000</button>
+    <button onclick="agregarCarrito('Capuchino',7000)">☕ Capuchino - $7.000</button>
+    `;
+}
     `;
 }
     if (producto == "Almuerzos") {
     botones = `
-    <button onclick="pedirWhatsApp('Almuerzo del Día - $10.000')">🍛 Almuerzo del Día - $10.000</button>
-    <button onclick="pedirWhatsApp('Almuerzo Especial - $15.000')">🥩 Almuerzo Especial - $15.000</button>
+    <button onclick="agregarCarrito('Almuerzo del Día',10000)">🍛 Almuerzo del Día - $10.000</button>
+
+<button onclick="agregarCarrito('Almuerzo Especial',15000)">🥩 Almuerzo Especial - $15.000</button>
     `;
 }
     if(producto=="Parrilla"){
