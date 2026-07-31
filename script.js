@@ -25,11 +25,11 @@ function verOpciones(producto){
     }
 if(producto=="Perros Calientes"){
     botones=`
-    <button onclick="agregarCarrito('Hamburguesa Clásica',15000)">🍔 Clásica - $15.000</button>
+    <button onclick="agregarCarrito('Perro Tradicional',10000)">🌭 Perro Tradicional - $10.000</button>
 
-<button onclick="agregarCarrito('Hamburguesa Especial',18000)">🍔 Especial - $18.000</button>
+    <button onclick="agregarCarrito('Perro Especial',14000)">🌭 Perro Especial - $14.000</button>
 
-<button onclick="agregarCarrito('Hamburguesa Doble',22000)">🍔 Doble - $22.000</button>
+    <button onclick="agregarCarrito('Perro Súper',18000)">🌭 Perro Súper - $18.000</button>
     `;
 }
     if(producto=="Sandwiches"){
