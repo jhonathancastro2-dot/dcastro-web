@@ -509,3 +509,17 @@ footer p{
     box-shadow: 0 4px 10px rgba(0,0,0,.3);
     z-index: 9999;
 }
+/* Reducir espacios entre categorías del menú */
+#menu h3 {
+    margin: 8px 0 4px;
+}
+
+#menu ul {
+    margin: 0 0 8px;
+    padding: 0;
+}
+
+#menu li {
+    margin: 2px 0;
+    padding: 8px 12px;
+}
