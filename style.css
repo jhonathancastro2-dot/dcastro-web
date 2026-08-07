@@ -523,3 +523,13 @@ footer p{
     margin: 2px 0;
     padding: 8px 12px;
 }
+/* Permitir desplazamiento dentro de las ventanas */
+.ventana {
+    overflow-y: auto;
+}
+
+.contenido-ventana {
+    max-height: 90vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
