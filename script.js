@@ -202,13 +202,13 @@ function enviarCarritoWhatsApp() {
 mensaje += "🧾 Pedido No. " + numeroPedido + "%0A";
 
 
-    let total = 0;
-    let direccion = document.getElementById("direccion").value;
-    let nombre = document.getElementById("nombreCliente").value;
-let telefono = document.getElementById("telefonoCliente").value;
-let referencia = document.getElementById("referencia").value;
-let formaPago = document.getElementById("formaPago").value;
-let ubicacion = document.getElementById("ubicacion").value;
+  <h4>📝 Observaciones del pedido</h4>
+
+<textarea
+    id="observacionesPedido"
+    placeholder="Ej: sin cebolla, agregar salsa, etc."
+    style="width:100%;padding:10px;margin:8px 0;min-height:80px;resize:vertical;">
+</textarea>
   
 function verOpciones(producto){
 
