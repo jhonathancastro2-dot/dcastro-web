@@ -394,81 +394,122 @@ function vaciarCarrito() {
 
 function enviarCarritoWhatsApp() {
 
-   let mensaje = "📦 *NUEVO PEDIDO D'CASTRO*%0A%0A";
-mensaje += "🧾 Pedido No. " + numeroPedido + "%0A";
+    if (carrito.length === 0) {
+        alert("El carrito está vacío.");
+        return;
+    }
 
+    let nombre = document.getElementById("nombreCliente").value.trim();
+    let telefono = document.getElementById("telefonoCliente").value.trim();
 
+    let domicilio = document.getElementById("domicilio").checked;
+
+    let direccion = document.getElementById("direccion").value.trim();
+    let referencia = document.getElementById("referencia").value.trim();
+    let formaPago = document.getElementById("formaPago").value;
+    let ubicacion = document.getElementById("ubicacion").value.trim();
+
+    /* OBSERVACIONES */
+    let observaciones = "";
+
+    if (document.getElementById("observaciones")) {
+        observaciones = document.getElementById("observaciones").value.trim();
+    }
+
+    /* VALIDACIONES */
+    if (domicilio) {
+
+        if (nombre === "") {
+            alert("Ingrese el nombre del cliente");
+            return;
+        }
+
+        if (telefono === "") {
+            alert("Ingrese el teléfono");
+            return;
+        }
+
+        if (direccion === "") {
+            alert("Ingrese la dirección");
+            return;
+        }
+
+    }
+
+    /* PRODUCTOS */
     let total = 0;
-    let direccion = document.getElementById("direccion").value;
-    let nombre = document.getElementById("nombreCliente").value;
-let telefono = document.getElementById("telefonoCliente").value;
-let referencia = document.getElementById("referencia").value;
-let formaPago = document.getElementById("formaPago").value;
-let ubicacion = document.getElementById("ubicacion").value;
-mensaje += "👤 Cliente: " + nombre + "%0A";
-mensaje += "📞 Teléfono: " + telefono + "%0A%0A";
-    carrito.forEach(function(item){
+    let productos = "";
+
+    carrito.forEach(function(item) {
 
         let subtotal = item.precio * item.cantidad;
 
-        mensaje += "• " + item.nombre +
-                   " x" + item.cantidad +
-                   " = $" + subtotal.toLocaleString() + "%0A";
+        productos +=
+            "• " + item.nombre +
+            " x" + item.cantidad +
+            " = $" + subtotal.toLocaleString("es-CO") +
+            "\n";
 
         total += subtotal;
-
     });
 
-    if (document.getElementById("domicilio").checked) {
-        mensaje += "• Domicilio = $3.000%0A";
+    /* MENSAJE */
+    let mensaje =
+        "📦 NUEVO PEDIDO D'CASTRO\n\n" +
+        "🧾 Pedido No. " + numeroPedido + "\n\n" +
+
+        "👤 Cliente: " + (nombre || "No especificado") + "\n" +
+        "📞 Teléfono: " + (telefono || "No especificado") + "\n\n" +
+
+        "🍽️ PRODUCTOS:\n" +
+        productos;
+
+    /* OBSERVACIONES */
+    if (observaciones !== "") {
+
+        mensaje +=
+            "\n📝 OBSERVACIONES:\n" +
+            observaciones + "\n";
+    }
+
+    /* DOMICILIO */
+    if (domicilio) {
+
+        mensaje +=
+            "\n🚚 DOMICILIO: $3.000\n" +
+            "📍 Dirección: " + direccion + "\n" +
+            "🏠 Referencia: " + (referencia || "No especificada") + "\n";
+
         total += 3000;
-    }
- 
-if (document.getElementById("domicilio").checked) {
 
-    mensaje += "%0A📍 Dirección: " + direccion;
+        if (ubicacion !== "") {
+            mensaje +=
+                "🗺️ Ubicación GPS:\n" +
+                ubicacion + "\n";
+        }
 
-    mensaje += "%0A🏠 Referencia: " + referencia;
+    } else {
 
-    mensaje += "%0A💳 Forma de pago: " + formaPago;
-
-    if (ubicacion != "") {
-        mensaje += "%0A🗺️ Abrir ubicación:%0A" + ubicacion;
-    }
-
-}
-    mensaje += "%0A💰 Total: $" + total.toLocaleString();
-if (carrito.length == 0){
-    alert("El carrito está vacío.");
-    return;
-}
-
-if(document.getElementById("domicilio").checked){
-
-    if(nombre.trim()==""){
-        alert("Ingrese el nombre del cliente");
-        return;
+        mensaje +=
+            "\n🏪 MODALIDAD: Recoger en el restaurante\n";
     }
 
-    if(telefono.trim()==""){
-        alert("Ingrese el teléfono");
-        return;
-    }
+    /* FORMA DE PAGO */
+    mensaje +=
+        "💳 Forma de pago: " + formaPago + "\n\n" +
 
-    if(direccion.trim()==""){
-        alert("Ingrese la dirección");
-        return;
-    }
+        "💰 TOTAL: $" +
+        total.toLocaleString("es-CO");
 
-}
-    window.open(
-        "https://wa.me/573206564360?text=" + mensaje,
-        "_blank"
-    );
+    /* ENVIAR A WHATSAPP */
+    let url =
+        "https://wa.me/573206564360?text=" +
+        encodeURIComponent(mensaje);
+
+    window.open(url, "_blank");
+
     numeroPedido++;
-localStorage.setItem("numeroPedido", numeroPedido);
 }
-
 function obtenerUbicacion() {
 
     if (!navigator.geolocation) {
