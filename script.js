@@ -198,10 +198,78 @@ function vaciarCarrito() {
 
 function enviarCarritoWhatsApp() {
 
-   let mensaje = "📦 *NUEVO PEDIDO D'CASTRO*%0A%0A";
-mensaje += "🧾 Pedido No. " + numeroPedido + "%0A";
+    if (carrito.length === 0) {
+        alert("El carrito está vacío.");
+        return;
+    }
 
+    let nombre = document.getElementById("nombreCliente").value.trim();
+    let telefono = document.getElementById("telefonoCliente").value.trim();
+    let domicilio = document.getElementById("domicilio").checked;
 
+    let mensaje = "📦 *NUEVO PEDIDO D'CASTRO*%0A%0A";
+    mensaje += "🧾 Pedido No. " + numeroPedido + "%0A";
+
+    mensaje += "👤 Cliente: " + encodeURIComponent(nombre || "No especificado") + "%0A";
+    mensaje += "📞 Teléfono: " + encodeURIComponent(telefono || "No especificado") + "%0A%0A";
+
+    let total = 0;
+
+    carrito.forEach(function(item) {
+
+        let subtotal = item.precio * item.cantidad;
+
+        mensaje += "• " + encodeURIComponent(item.nombre) +
+                   " x" + item.cantidad +
+                   " = $" + subtotal.toLocaleString("es-CO") + "%0A";
+
+        total += subtotal;
+    });
+
+    if (domicilio) {
+
+        let direccion = document.getElementById("direccion").value.trim();
+        let referencia = document.getElementById("referencia").value.trim();
+        let formaPago = document.getElementById("formaPago").value;
+        let ubicacion = document.getElementById("ubicacion").value.trim();
+
+        if (nombre === "") {
+            alert("Ingrese el nombre del cliente.");
+            return;
+        }
+
+        if (telefono === "") {
+            alert("Ingrese el teléfono.");
+            return;
+        }
+
+        if (direccion === "") {
+            alert("Ingrese la dirección.");
+            return;
+        }
+
+        mensaje += "%0A🏠 *DOMICILIO*%0A";
+        mensaje += "📍 Dirección: " + encodeURIComponent(direccion) + "%0A";
+        mensaje += "🏠 Referencia: " + encodeURIComponent(referencia || "No especificada") + "%0A";
+        mensaje += "💳 Forma de pago: " + encodeURIComponent(formaPago) + "%0A";
+
+        if (ubicacion !== "") {
+            mensaje += "🗺️ Ubicación GPS:%0A" + encodeURIComponent(ubicacion) + "%0A";
+        }
+
+        mensaje += "🛵 Domicilio: $3.000%0A";
+        total += 3000;
+    }
+
+    mensaje += "%0A💰 *TOTAL: $" + total.toLocaleString("es-CO") + "*";
+
+    window.open(
+        "https://wa.me/573206564360?text=" + mensaje,
+        "_blank"
+    );
+
+    numeroPedido++;
+}
    
 function verOpciones(producto){
 
