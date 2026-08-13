@@ -401,13 +401,8 @@ function enviarCarritoWhatsApp() {
     let referencia = document.getElementById("referencia").value.trim();
     let formaPago = document.getElementById("formaPago").value;
     let ubicacion = document.getElementById("ubicacion").value.trim();
+let observaciones = document.getElementById("observacionesPedido").value.trim();
 
-    /* OBSERVACIONES */
-    let observaciones = "";
-
-    if (document.getElementById("observaciones")) {
-        observaciones = document.getElementById("observaciones").value.trim();
-    }
 
     /* VALIDACIONES */
     if (domicilio) {
