@@ -214,6 +214,7 @@ function enviarCarritoWhatsApp() {
     mensaje += "📞 Teléfono: " + encodeURIComponent(telefono || "No especificado") + "%0A%0A";
 
     let total = 0;
+    let observaciones = document.getElementById("observacionesPedido").value.trim();
 
     carrito.forEach(function(item) {
 
@@ -232,7 +233,7 @@ function enviarCarritoWhatsApp() {
         let referencia = document.getElementById("referencia").value.trim();
         let formaPago = document.getElementById("formaPago").value;
         let ubicacion = document.getElementById("ubicacion").value.trim();
-        let observaciones = document.getElementById("observacionesPedido").value.trim();
+       
         if (nombre === "") {
             alert("Ingrese el nombre del cliente.");
             return;
