@@ -284,23 +284,23 @@ Solicitar domicilio (+$3.000)
            style="width:100%;padding:10px;margin:8px 0;">
 
     <input type="hidden" id="ubicacion">
-
-    <button type="button" onclick="obtenerUbicacion()">
-        <h4>💳 Forma de pago</h4>
+<h4>💳 Forma de pago</h4>
 
 <select id="formaPago" style="width:100%;padding:10px;margin:8px 0;">
     <option value="Efectivo">💵 Efectivo</option>
-    <option value="Nequi">📲 Nequi</option>
+    <option value="Nequi">📱 Nequi</option>
     <option value="Daviplata">💙 Daviplata</option>
     <option value="Transferencia">🏦 Transferencia</option>
-    <option value="Datafono">💳 Datáfono</option>
+    <option value="Datáfono">💳 Datáfono</option>
 </select>
-        📍 Compartir mi ubicación GPS
-    </button>
 
-    <small id="estadoGPS"></small>
+<button type="button" onclick="obtenerUbicacion()"
+        style="width:100%;padding:12px;margin:10px 0;background:#25D366;color:white;border:none;border-radius:8px;font-size:16px;">
+    📍 Compartir mi ubicación GPS
+</button>
 
-</div>
+<small id="estadoGPS"></small>
+    </div>
     <button onclick="enviarCarritoWhatsApp()">📲 Enviar por WhatsApp</button>
     <button onclick="vaciarCarrito()">🗑️ Vaciar carrito</button>
     <button onclick="cerrarCarrito()">❌ Cerrar</button>
