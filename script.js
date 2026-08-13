@@ -202,14 +202,7 @@ function enviarCarritoWhatsApp() {
 mensaje += "🧾 Pedido No. " + numeroPedido + "%0A";
 
 
-  <h4>📝 Observaciones del pedido</h4>
-
-<textarea
-    id="observacionesPedido"
-    placeholder="Ej: sin cebolla, agregar salsa, etc."
-    style="width:100%;padding:10px;margin:8px 0;min-height:80px;resize:vertical;">
-</textarea>
-  
+   
 function verOpciones(producto){
 
     document.getElementById("ventanaMenu").style.display="flex";
