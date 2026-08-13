@@ -232,7 +232,7 @@ function enviarCarritoWhatsApp() {
         let referencia = document.getElementById("referencia").value.trim();
         let formaPago = document.getElementById("formaPago").value;
         let ubicacion = document.getElementById("ubicacion").value.trim();
-
+        let observaciones = document.getElementById("observacionesPedido").value.trim();
         if (nombre === "") {
             alert("Ingrese el nombre del cliente.");
             return;
