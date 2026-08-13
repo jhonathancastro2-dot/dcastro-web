@@ -260,7 +260,9 @@ function enviarCarritoWhatsApp() {
         mensaje += "🛵 Domicilio: $3.000%0A";
         total += 3000;
     }
-
+if (observaciones !== "") {
+    mensaje += "%0A📝 *Observaciones:* " + encodeURIComponent(observaciones);
+}
     mensaje += "%0A💰 *TOTAL: $" + total.toLocaleString("es-CO") + "*";
 
     window.open(
