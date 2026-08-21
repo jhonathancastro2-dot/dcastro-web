@@ -1,260 +1,73 @@
+```css
+/* =========================================================
+   D'CASTRO RESTAURANTE
+   Estilo principal
+   Colores: Negro / Amarillo / Rojo
+   ========================================================= */
+
+
+/* =========================================================
+   1. CONFIGURACIÓN GENERAL
+   ========================================================= */
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     margin:0;
-    font-family:Arial, sans-serif;
-    background:#111;
-    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#0d0d0d;
+    color:#fff;
+    line-height:1.5;
 }
 
-header{
-    background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)), #222;
-    text-align:center;
-    padding:60px 20px;
-}
-
-h1{
-    color:#FFD700;
-    font-size:48px;
-    margin-bottom:10px;
-}
-
-h2{
-    color:#ff4444;
+img{
+    max-width:100%;
+    display:block;
 }
 
 a{
-    display:inline-block;
-    margin:10px;
-    padding:12px 25px;
-    border-radius:8px;
     text-decoration:none;
-    font-weight:bold;
-    color:white;
-    background:#d62828;
 }
 
-a:hover{
-    background:#ff4444;
-}
 
-#menu{
-    max-width:900px;
-    margin:40px auto;
-    padding:20px;
-}
+/* =========================================================
+   2. NAVEGACIÓN
+   ========================================================= */
 
-#menu h3{
-    background:#d62828;
-    padding:10px;
-    border-radius:8px;
-}
-
-ul{
-    list-style:none;
-    padding:0;
-}
-
-li{
-    background:#222;
-    margin:8px 0;
-    padding:15px;
-    border-radius:8px;
-    border-left:5px solid gold;
-}
-
-footer{
-    background:#000;
-    text-align:center;
-    padding:20px;
-    margin-top:40px;
-}
-header{
-    background: linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
-    url('https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=1400&q=80');
-    background-size: cover;
-    background-position: center;
-    padding: 100px 20px;
-}
-
-header h1{
-    font-size:60px;
-    color:#FFD700;
-    text-shadow:3px 3px 10px black;
-}
-
-header p{
-    font-size:20px;
-    max-width:700px;
-    margin:auto;
-}
-
-#menu{
-    display:grid;
-    gap:20px;
-}
-
-#menu ul{
-    background:#1d1d1d;
-    padding:20px;
-    border-radius:15px;
-   box-shadow: none;
-}
-
-li:hover{
-    transform:scale(1.03);
-    transition:.3s;
-}
-#promociones{
-    max-width:900px;
-    margin:40px auto;
-    padding:20px;
-}
-
-#promociones h2{
-    text-align:center;
-    color:#FFD700;
-}
-
-.promo{
-    background:#222;
-    border-left:6px solid #FFD700;
-    padding:20px;
-    margin:15px 0;
-    border-radius:12px;
-}
-.whatsapp-float{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
-    color:white;
-    padding:15px 20px;
-    border-radius:50px;
-    text-decoration:none;
-    font-weight:bold;
-    box-shadow:0 4px 10px rgba(0,0,0,.4);
-    z-index:999;
-}
-
-.whatsapp-float:hover{
-    background:#1ebe5d;
-}
-#galeria{
-    max-width:1100px;
-    margin:50px auto;
-    padding:20px;
-    text-align:center;
-}
-
-.galeria{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:20px;
-}
-
-.plato{
-    background:#222;
-    border-radius:15px;
-    overflow:hidden;
-    width:300px;
-    box-shadow:0 0 15px rgba(255,215,0,.2);
-}
-
-.plato img{
+nav{
+    position:sticky;
+    top:0;
     width:100%;
-    height:220px;
-    object-fit:cover;
-}
-
-.plato h3{
-    padding:15px;
-    color:#FFD700;
-}
-nav{
-    position:sticky;
-    top:0;
-    background:#000;
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    padding:15px;
-    z-index:1000;
-}
-
-nav a{
-    color:#FFD700;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-nav a:hover{
-    color:white;
-}
-#nosotros{
-    max-width:1100px;
-    margin:50px auto;
-    padding:20px;
-    text-align:center;
-}
-
-.ventajas{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:20px;
-}
-
-.caja{
-    width:280px;
-    background:#1b1b1b;
-    padding:25px;
-    border-radius:15px;
-    border:2px solid #FFD700;
-}
-
-.caja h3{
-    color:#FFD700;
-}
-#testimonios{
-    max-width:1000px;
-    margin:50px auto;
-    padding:20px;
-    text-align:center;
-}
-
-.testimonio{
-    background:#222;
-    border-left:5px solid #FFD700;
-    border-radius:12px;
-    padding:20px;
-    margin:20px 0;
-}
-
-.testimonio strong{
-    color:#FFD700;
-    font-size:20px;
-}
-nav{
-    position:sticky;
-    top:0;
-    background:#111;
+    background:rgba(10,10,10,.96);
     display:flex;
     justify-content:space-around;
     align-items:center;
-    padding:15px;
+    gap:15px;
+    padding:14px 20px;
     border-bottom:2px solid #FFD700;
     z-index:1000;
+    backdrop-filter:blur(8px);
 }
 
 nav a{
     color:#FFD700;
-    text-decoration:none;
     font-weight:bold;
+    margin:0;
+    padding:8px 12px;
+    background:transparent;
+    border-radius:6px;
     transition:.3s;
 }
 
 nav a:hover{
     color:#fff;
+    background:#d62828;
 }
 
 .logo{
@@ -262,73 +75,592 @@ nav a:hover{
     color:#FFD700;
     font-weight:bold;
 }
-.plato{
-    transition:.3s;
-    cursor:pointer;
+
+
+/* =========================================================
+   3. HERO / PORTADA
+   ========================================================= */
+
+.hero{
+    position:relative;
+    background:
+        linear-gradient(
+            rgba(0,0,0,.72),
+            rgba(0,0,0,.78)
+        ),
+        url("https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=1600&q=85");
+
+    background-size:cover;
+    background-position:center;
+    min-height:620px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+    color:#fff;
+    padding:100px 20px;
 }
 
-.plato:hover{
-    transform:translateY(-8px);
-    box-shadow:0 10px 25px rgba(255,215,0,.4);
+.hero-contenido{
+    width:100%;
+    max-width:800px;
+    margin:auto;
 }
 
-.precio{
-    font-size:26px;
+.hero h1{
+    font-size:clamp(40px,7vw,68px);
     color:#FFD700;
-    font-weight:bold;
-    text-align:center;
-    margin:10px 0;
+    margin:0 0 20px;
+    font-weight:900;
+    letter-spacing:2px;
+    text-shadow:
+        3px 3px 0 #000,
+        0 0 20px rgba(255,215,0,.35);
 }
 
-.pedir{
-    display:block;
-    background:#25D366;
-    color:white;
-    text-align:center;
-    margin:15px;
-    padding:12px;
-    border-radius:10px;
-    text-decoration:none;
-    font-weight:bold;
+.hero p{
+    font-size:clamp(18px,3vw,23px);
+    margin:12px 0;
+    color:#fff;
 }
+
+.hero-botones{
+    margin-top:35px;
+}
+
+
+/* =========================================================
+   4. BOTONES PRINCIPALES
+   ========================================================= */
+
+.btn,
+.btn-whatsapp{
+    display:inline-block;
+    margin:8px;
+    padding:15px 30px;
+    border-radius:10px;
+    font-weight:bold;
+    transition:.3s;
+    box-shadow:0 5px 15px rgba(0,0,0,.35);
+}
+
+.btn{
+    background:#FFD700;
+    color:#000;
+}
+
+.btn:hover{
+    background:#ffbf00;
+    transform:translateY(-3px);
+}
+
+.btn-whatsapp{
+    background:#25D366;
+    color:#fff;
+}
+
+.btn-whatsapp:hover{
+    background:#1ebe5d;
+    transform:translateY(-3px);
+}
+
+
+/* =========================================================
+   5. TÍTULOS GENERALES
+   ========================================================= */
+
+h1,
+h2,
+h3{
+    line-height:1.2;
+}
+
+h2{
+    color:#FFD700;
+}
+
+#menu h2,
+#promociones h2,
+#destacados h2,
+#galeria h2,
+#nosotros h2,
+#testimonios h2{
+    text-align:center;
+    color:#FFD700;
+    font-size:clamp(30px,5vw,42px);
+    margin:0 0 20px;
+}
+
+.subtitulo{
+    text-align:center;
+    color:#d8d8d8;
+    max-width:750px;
+    margin:0 auto 40px;
+    font-size:18px;
+    line-height:1.7;
+}
+
+
+/* =========================================================
+   6. MENÚ
+   ========================================================= */
+
+#menu{
+    max-width:1000px;
+    margin:0 auto;
+    padding:70px 20px;
+}
+
+#menu h3{
+    background:linear-gradient(135deg,#d62828,#a91515);
+    color:#fff;
+    padding:15px 18px;
+    margin:12px 0 5px;
+    border-radius:10px;
+    border-left:5px solid #FFD700;
+    font-size:19px;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 4px 12px rgba(0,0,0,.25);
+}
+
+#menu h3:hover{
+    background:linear-gradient(135deg,#ef3333,#c51d1d);
+    transform:translateX(4px);
+}
+
+#menu ul{
+    list-style:none;
+    margin:0 0 8px;
+    padding:0;
+    background:#171717;
+    border-radius:0 0 10px 10px;
+}
+
+#menu li{
+    background:#202020;
+    color:#fff;
+    margin:3px 0;
+    padding:10px 14px;
+    border-radius:7px;
+    border-left:4px solid #FFD700;
+    transition:.3s;
+}
+
+#menu li:hover{
+    background:#292929;
+    transform:translateX(4px);
+}
+
+
+/* =========================================================
+   7. PROMOCIONES
+   ========================================================= */
+
+#promociones{
+    max-width:1000px;
+    margin:0 auto;
+    padding:70px 20px;
+}
+
+.promo{
+    background:
+        linear-gradient(
+            135deg,
+            #1d1d1d,
+            #111
+        );
+
+    border-left:6px solid #FFD700;
+    padding:22px;
+    margin:18px 0;
+    border-radius:12px;
+
+    box-shadow:0 5px 18px rgba(0,0,0,.3);
+
+    transition:.3s;
+}
+
+.promo:hover{
+    transform:translateY(-4px);
+    box-shadow:0 8px 22px rgba(255,215,0,.15);
+}
+
+.promo h3{
+    color:#FFD700;
+    margin-top:0;
+}
+
+.promo p{
+    color:#ddd;
+}
+
+
+/* =========================================================
+   8. PRODUCTOS DESTACADOS
+   ========================================================= */
+
 #destacados{
     max-width:1100px;
-    margin:60px auto;
-    padding:20px;
-    text-align:center;
+    margin:0 auto;
+    padding:70px 20px;
 }
 
 .destacados-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:20px;
+    grid-template-columns:
+        repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
 }
 
 .destacado{
-    background:#1b1b1b;
-    border:2px solid #FFD700;
-    border-radius:15px;
-    padding:25px;
+    background:#181818;
+    border:1px solid rgba(255,215,0,.55);
+    border-radius:16px;
+    padding:28px;
+    text-align:center;
     transition:.3s;
+    box-shadow:0 8px 25px rgba(0,0,0,.3);
 }
 
 .destacado:hover{
     transform:translateY(-8px);
-    box-shadow:0 10px 25px rgba(255,215,0,.3);
+    border-color:#FFD700;
+    box-shadow:0 12px 30px rgba(255,215,0,.18);
+}
+
+.destacado h3{
+    color:#FFD700;
+}
+
+.destacado p{
+    color:#ddd;
 }
 
 .precio-destacado{
     display:block;
     font-size:30px;
     color:#FFD700;
-    font-weight:bold;
-    margin:15px 0;
+    font-weight:900;
+    margin:18px 0;
 }
-footer{
-    background:#111;
-    color:white;
+
+
+/* =========================================================
+   9. GALERÍA
+   ========================================================= */
+
+#galeria{
+    max-width:1150px;
+    margin:0 auto;
+    padding:70px 20px;
     text-align:center;
-    padding:50px 20px;
+}
+
+.galeria{
+    display:grid;
+    grid-template-columns:
+        repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.plato{
+    background:#181818;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 7px 20px rgba(0,0,0,.4);
+    transition:.3s;
+    cursor:pointer;
+    border:1px solid #292929;
+}
+
+.plato:hover{
+    transform:translateY(-8px);
+    border-color:#FFD700;
+    box-shadow:
+        0 12px 30px rgba(255,215,0,.22);
+}
+
+.plato img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.plato:hover img{
+    transform:scale(1.04);
+}
+
+.plato h3{
+    color:#FFD700;
+    padding:12px 15px 0;
+    margin:0;
+}
+
+.plato p{
+    color:#ddd;
+    padding:0 15px;
+}
+
+.precio{
+    font-size:26px;
+    color:#FFD700 !important;
+    font-weight:900;
+    text-align:center;
+    margin:12px 0;
+}
+
+
+/* =========================================================
+   10. BOTÓN PEDIR
+   ========================================================= */
+
+.pedir{
+    display:block;
+    background:#25D366;
+    color:#fff;
+    text-align:center;
+    margin:15px;
+    padding:13px;
+    border-radius:10px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.pedir:hover{
+    background:#1ebe5d;
+    transform:translateY(-2px);
+}
+
+
+/* =========================================================
+   11. NOSOTROS / VENTAJAS
+   ========================================================= */
+
+#nosotros{
+    max-width:1100px;
+    margin:0 auto;
+    padding:70px 20px;
+    text-align:center;
+}
+
+.ventajas{
+    display:grid;
+    grid-template-columns:
+        repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.caja{
+    background:#181818;
+    padding:28px;
+    border-radius:16px;
+    border:1px solid rgba(255,215,0,.5);
+    transition:.3s;
+}
+
+.caja:hover{
+    transform:translateY(-6px);
+    border-color:#FFD700;
+    box-shadow:0 10px 25px rgba(255,215,0,.15);
+}
+
+.caja h3{
+    color:#FFD700;
+}
+
+.caja p{
+    color:#ddd;
+}
+
+
+/* =========================================================
+   12. TESTIMONIOS
+   ========================================================= */
+
+#testimonios{
+    max-width:1000px;
+    margin:0 auto;
+    padding:70px 20px;
+    text-align:center;
+}
+
+.testimonio{
+    background:#181818;
+    border-left:5px solid #FFD700;
+    border-radius:12px;
+    padding:22px;
+    margin:20px 0;
+    box-shadow:0 5px 15px rgba(0,0,0,.25);
+}
+
+.testimonio p{
+    color:#ddd;
+    font-size:17px;
+}
+
+.testimonio strong{
+    color:#FFD700;
+    font-size:20px;
+}
+
+
+/* =========================================================
+   13. VENTANAS EMERGENTES
+   ========================================================= */
+
+.ventana{
+    display:none;
+    position:fixed;
+    inset:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.78);
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+    overflow-y:auto;
+    z-index:10000;
+}
+
+.contenido-ventana{
+    background:#fff;
+    color:#111;
+    padding:25px;
+    border-radius:18px;
+    width:90%;
+    max-width:400px;
+    max-height:90vh;
+    overflow-y:auto;
+    box-sizing:border-box;
+    text-align:center;
+    box-shadow:0 15px 50px rgba(0,0,0,.6);
+}
+
+.contenido-ventana h2{
+    color:#d62828;
+}
+
+.contenido-ventana button{
+    width:100%;
+    padding:13px;
+    margin:8px 0;
+    border:none;
+    border-radius:10px;
+    background:#d62828;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.contenido-ventana button:hover{
+    background:#b51d1d;
+}
+
+
+/* =========================================================
+   14. CARRITO
+   ========================================================= */
+
+#carritoBtn{
+    position:fixed;
+    bottom:20px;
+    left:20px;
+
+    background:#ff9800;
+    color:#fff;
+
+    border:none;
+    border-radius:30px;
+
+    padding:13px 20px;
+
+    font-size:16px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.4);
+
+    z-index:9999;
+
+    transition:.3s;
+}
+
+#carritoBtn:hover{
+    background:#ffb300;
+    transform:scale(1.05);
+}
+
+
+/* =========================================================
+   15. WHATSAPP FLOTANTE
+   ========================================================= */
+
+.whatsapp-float{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+
+    background:#25D366;
+    color:white;
+
+    padding:15px 20px;
+
+    border-radius:50px;
+
+    font-weight:bold;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.45);
+
+    z-index:9999;
+
+    transition:.3s;
+}
+
+.whatsapp-float:hover{
+    background:#1ebe5d;
+    transform:scale(1.05);
+}
+
+
+/* =========================================================
+   16. CAMPOS DEL CARRITO
+   ========================================================= */
+
+.contenido-ventana input,
+.contenido-ventana textarea,
+.contenido-ventana select{
+    width:100%;
+    padding:11px;
+    margin:8px 0;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-family:inherit;
+    box-sizing:border-box;
+}
+
+.contenido-ventana textarea{
+    min-height:80px;
+    resize:vertical;
+}
+
+
+/* =========================================================
+   17. FOOTER
+   ========================================================= */
+
+footer{
+    background:#080808;
+    color:#fff;
+    text-align:center;
+    padding:55px 20px;
+    margin-top:40px;
     border-top:3px solid #FFD700;
 }
 
@@ -339,197 +671,120 @@ footer h2{
 
 footer p{
     margin:8px 0;
-    font-size:18px;
-}
-.hero{
-    .hero{
-    text-align:center;
-    padding:40px 20px;
-    color:white;
-}
-}
-
-.hero h1{
-    font-size:55px;
-    color:#FFD700;
-    margin-bottom:20px;
-}
-
-.hero p{
-    font-size:22px;
-    margin:10px 0;
-}
-
-.botones{
-    margin-top:30px;
-}
-
-.btn,
-.btn2{
-    display:inline-block;
-    margin:10px;
-    padding:15px 30px;
-    border-radius:10px;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-.btn{
-    background:#FFD700;
-    color:black;
-}
-
-.btn2{
-    background:#25D366;
-    color:white;
-}
-.hero{
-    background: linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
-    url("https://images.unsplash.com/photo-1550547660-d9450f859349?w=1600");
-    background-size:cover;
-    background-position:center;
-    text-align:center;
-    color:#fff;
-    padding:100px 20px;
-}
-
-.hero-contenido{
-    max-width:700px;
-    margin:auto;
-}
-
-.hero h1{
-    font-size:55px;
-    color:#FFD700;
-    margin-bottom:20px;
-}
-
-.hero p{
-    font-size:22px;
-    margin:12px 0;
-}
-
-.hero-botones{
-    margin-top:35px;
-}
-
-.btn,
-.btn-whatsapp{
-    display:inline-block;
-    padding:14px 28px;
-    margin:10px;
-    border-radius:10px;
-    text-decoration:none;
-    font-weight:bold;
-    transition:.3s;
-}
-
-.btn{
-    background:#FFD700;
-    color:#000;
-}
-
-.btn:hover{
-    background:#ffbf00;
-}
-
-.btn-whatsapp{
-    background:#25D366;
-    color:white;
-}
-
-.btn-whatsapp:hover{
-    background:#1ebd5a;
-}
-#menu h2{
-    text-align:center;
-    font-size:42px;
-    color:#FFD700;
-    margin-top:30px;
-}
-
-.subtitulo{
-    text-align:center;
+    font-size:17px;
     color:#ddd;
-    max-width:700px;
-    margin:15px auto 40px;
-    font-size:18px;
-    line-height:1.6;
-}
-.ventana{
-    display:none;
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.7);
-    justify-content:center;
-    align-items:center;
-    z-index:1000;
 }
 
-.contenido-ventana{
-    background:#fff;
-    color:#000;
-    padding:20px;
-    border-radius:15px;
-    width:90%;
-    max-width:350px;
-    text-align:center;
+
+/* =========================================================
+   18. RESPONSIVE — CELULARES
+   ========================================================= */
+
+@media(max-width:700px){
+
+    nav{
+        gap:5px;
+        padding:10px 5px;
+        overflow-x:auto;
+        justify-content:flex-start;
+    }
+
+    nav a{
+        font-size:13px;
+        white-space:nowrap;
+        padding:7px 8px;
+    }
+
+    .hero{
+        min-height:540px;
+        padding:80px 15px;
+    }
+
+    .hero h1{
+        font-size:40px;
+        letter-spacing:1px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    .btn,
+    .btn-whatsapp{
+        display:block;
+        margin:12px auto;
+        max-width:280px;
+    }
+
+    #menu,
+    #promociones,
+    #destacados,
+    #galeria,
+    #nosotros,
+    #testimonios{
+        padding-left:15px;
+        padding-right:15px;
+    }
+
+    #menu h3{
+        font-size:16px;
+        padding:13px;
+    }
+
+    .plato img{
+        height:210px;
+    }
+
+    .contenido-ventana{
+        width:95%;
+        padding:20px;
+    }
+
+    #carritoBtn{
+        left:12px;
+        bottom:15px;
+        padding:11px 16px;
+    }
+
+    .whatsapp-float{
+        right:12px;
+        bottom:15px;
+        padding:13px 16px;
+        font-size:14px;
+    }
 }
 
-.contenido-ventana button{
-    width:100%;
-    padding:12px;
-    margin:8px 0;
-    border:none;
-    border-radius:10px;
-    background:#2e7d32;
-    color:white;
-    font-size:16px;
-    cursor:pointer;
-}
 
-.contenido-ventana button:hover{
-    background:#1b5e20;
-}
-#carritoBtn{
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    background: #ff9800;
-    color: white;
-    border: none;
-    border-radius: 30px;
-    padding: 12px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,.3);
-    z-index: 9999;
-}
-/* Reducir espacios entre categorías del menú */
-#menu h3 {
-    margin: 8px 0 4px;
-}
+/* =========================================================
+   19. CELULARES MUY PEQUEÑOS
+   ========================================================= */
 
-#menu ul {
-    margin: 0 0 8px;
-    padding: 0;
-}
+@media(max-width:400px){
 
-#menu li {
-    margin: 2px 0;
-    padding: 8px 12px;
-}
-/* Permitir desplazamiento dentro de las ventanas */
-.ventana {
-    overflow-y: auto;
-}
+    .hero h1{
+        font-size:34px;
+    }
 
-.contenido-ventana {
-    max-height: 90vh;
-    overflow-y: auto;
-    box-sizing: border-box;
+    .hero p{
+        font-size:16px;
+    }
+
+    #menu h3{
+        font-size:15px;
+    }
+
+    .precio{
+        font-size:23px;
+    }
+
+    .precio-destacado{
+        font-size:26px;
+    }
+
+    .whatsapp-float{
+        font-size:13px;
+        padding:11px 13px;
+    }
+
 }
+```
