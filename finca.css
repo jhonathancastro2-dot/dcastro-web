@@ -1,0 +1,299 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f1e8;
+    color: #222;
+}
+
+/* PORTADA */
+
+.hero-finca {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    background:
+        linear-gradient(rgba(0,0,0,.48), rgba(0,0,0,.58)),
+        url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1600&q=80")
+        center/cover no-repeat;
+}
+
+.hero-contenido {
+    color: white;
+    max-width: 700px;
+}
+
+.logo-finca {
+    font-size: 70px;
+    margin-bottom: 10px;
+}
+
+.hero-contenido h1 {
+    margin: 0;
+    font-size: 52px;
+    letter-spacing: 2px;
+}
+
+.hero-contenido p {
+    font-size: 22px;
+    margin: 15px 0 30px;
+}
+
+/* BOTONES */
+
+.boton-principal,
+.boton-whatsapp {
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.boton-principal {
+    background: #d6a629;
+    color: #111;
+}
+
+.boton-principal:hover {
+    transform: scale(1.05);
+}
+
+.boton-whatsapp {
+    background: #25d366;
+    color: white;
+}
+
+/* MENU */
+
+.menu-finca {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #1e3a24;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px;
+}
+
+.menu-finca a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-finca a:hover {
+    color: #d6a629;
+}
+
+/* PRESENTACION */
+
+.presentacion {
+    text-align: center;
+    max-width: 850px;
+    margin: auto;
+    padding: 60px 20px 30px;
+}
+
+.presentacion h2,
+.planes h2,
+.seccion-reservas h2,
+.contacto h2 {
+    color: #1e3a24;
+    font-size: 32px;
+}
+
+/* PLANES */
+
+.planes {
+    padding: 40px 20px 70px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.planes > h2 {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.contenedor-planes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.tarjeta-plan {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(0,0,0,.12);
+    transition: .3s;
+}
+
+.tarjeta-plan:hover {
+    transform: translateY(-5px);
+}
+
+.imagen-plan {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 70px;
+    background: #dfe8d8;
+}
+
+.contenido-plan {
+    padding: 22px;
+    text-align: center;
+}
+
+.contenido-plan h3 {
+    color: #1e3a24;
+    font-size: 24px;
+    margin-top: 5px;
+}
+
+.contenido-plan p {
+    line-height: 1.5;
+    color: #555;
+}
+
+.contenido-plan button {
+    border: none;
+    border-radius: 25px;
+    padding: 12px 20px;
+    background: #1e3a24;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contenido-plan button:hover {
+    background: #d6a629;
+    color: #111;
+}
+
+.contenido-plan button:disabled {
+    background: #999;
+    cursor: not-allowed;
+}
+
+/* PROXIMAMENTE */
+
+.proximamente {
+    display: inline-block;
+    background: #d6a629;
+    color: #111;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+/* RESERVAS */
+
+.seccion-reservas {
+    text-align: center;
+    padding: 70px 20px;
+    background: #1e3a24;
+    color: white;
+}
+
+.seccion-reservas h2 {
+    color: #d6a629;
+}
+
+.seccion-reservas p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* CONTACTO */
+
+.contacto {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.contacto h2 {
+    margin-bottom: 10px;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    background: #111;
+    color: white;
+    padding: 30px 20px;
+}
+
+footer a {
+    color: #d6a629;
+    text-decoration: none;
+}
+
+/* CELULAR */
+
+@media (max-width: 800px) {
+
+    .hero-contenido h1 {
+        font-size: 38px;
+    }
+
+    .hero-contenido p {
+        font-size: 18px;
+    }
+
+    .contenedor-planes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .hero-finca {
+        min-height: 65vh;
+    }
+
+    .logo-finca {
+        font-size: 55px;
+    }
+
+    .hero-contenido h1 {
+        font-size: 32px;
+    }
+
+    .menu-finca {
+        gap: 15px;
+        font-size: 14px;
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+
+    .contenedor-planes {
+        grid-template-columns: 1fr;
+    }
+
+    .presentacion h2,
+    .planes h2,
+    .seccion-reservas h2,
+    .contacto h2 {
+        font-size: 27px;
+    }
+
+}
