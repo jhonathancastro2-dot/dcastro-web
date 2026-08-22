@@ -788,3 +788,16 @@ footer p{
 
 }
 ```
+.logo-dcastro {
+    width: 180px;
+    max-width: 60%;
+    height: auto;
+    display: block;
+    margin: 0 auto 15px;
+}
+@media (max-width: 600px) {
+    .logo-dcastro {
+        width: 140px;
+        max-width: 55%;
+    }
+}
