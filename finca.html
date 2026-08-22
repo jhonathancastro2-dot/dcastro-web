@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Finca Emanuel | Naturaleza, descanso y diversión</title>
+
+    <link rel="stylesheet" href="finca.css">
+</head>
+
+<body>
+
+<header class="hero-finca">
+
+    <div class="hero-contenido">
+
+        <div class="logo-finca">
+            🌿
+        </div>
+
+        <h1>FINCA EMANUEL</h1>
+
+        <p>
+            Naturaleza, descanso y diversión
+        </p>
+
+        <a href="#planes" class="boton-principal">
+            📅 RESERVAR AHORA
+        </a>
+
+    </div>
+
+</header>
+
+
+<nav class="menu-finca">
+
+    <a href="#inicio">Inicio</a>
+    <a href="#planes">Planes</a>
+    <a href="#reservas">Reservas</a>
+    <a href="#contacto">Contacto</a>
+
+</nav>
+
+
+<main id="inicio">
+
+    <section class="presentacion">
+
+        <h2>Bienvenidos a Finca Emanuel</h2>
+
+        <p>
+            Un espacio para disfrutar con familiares y amigos,
+            rodeado de naturaleza y pensado para vivir momentos
+            especiales.
+        </p>
+
+    </section>
+
+
+    <section id="planes" class="planes">
+
+        <h2>Nuestros planes</h2>
+
+        <div class="contenedor-planes">
+
+
+            <article class="tarjeta-plan">
+
+                <div class="imagen-plan pasadia">
+                    ☀️
+                </div>
+
+                <div class="contenido-plan">
+
+                    <h3>Pasadía</h3>
+
+                    <p>
+                        Disfruta de un día especial en Finca Emanuel.
+                    </p>
+
+                    <button onclick="reservar('Pasadía')">
+                        RESERVAR
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <article class="tarjeta-plan">
+
+                <div class="imagen-plan cancha">
+                    ⚽
+                </div>
+
+                <div class="contenido-plan">
+
+                    <h3>Cancha — 1 hora</h3>
+
+                    <p>
+                        Reserva la cancha exclusivamente durante una hora.
+                    </p>
+
+                    <button onclick="reservar('Cancha - 1 hora')">
+                        RESERVAR CANCHA
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <article class="tarjeta-plan">
+
+                <div class="imagen-plan camping">
+                    ⛺
+                </div>
+
+                <div class="contenido-plan">
+
+                    <h3>Camping</h3>
+
+                    <p>
+                        Vive una experiencia diferente en contacto
+                        con la naturaleza.
+                    </p>
+
+                    <button onclick="reservar('Camping')">
+                        RESERVAR
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <article class="tarjeta-plan">
+
+                <div class="imagen-plan glamping">
+                    🏕️
+                </div>
+
+                <div class="contenido-plan">
+
+                    <h3>Glamping</h3>
+
+                    <p>
+                        Descansa y disfruta de una experiencia
+                        especial con mayor comodidad.
+                    </p>
+
+                    <button onclick="reservar('Glamping')">
+                        RESERVAR
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <article class="tarjeta-plan">
+
+                <div class="imagen-plan eventos">
+                    🎉
+                </div>
+
+                <div class="contenido-plan">
+
+                    <h3>Eventos</h3>
+
+                    <p>
+                        Un espacio para celebraciones,
+                        reuniones y momentos especiales.
+                    </p>
+
+                    <button onclick="reservar('Evento')">
+                        CONSULTAR
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <article class="tarjeta-plan">
+
+                <div class="imagen-plan pesca">
+                    🎣
+                </div>
+
+                <div class="contenido-plan">
+
+                    <span class="proximamente">
+                        PRÓXIMAMENTE
+                    </span>
+
+                    <h3>Pesca</h3>
+
+                    <p>
+                        Muy pronto podrás disfrutar de nuestro
+                        servicio de pesca.
+                    </p>
+
+                    <button disabled>
+                        PRÓXIMAMENTE
+                    </button>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+    <section id="reservas" class="seccion-reservas">
+
+        <h2>Reserva tu experiencia</h2>
+
+        <p>
+            Selecciona uno de nuestros planes y solicita
+            tu reserva.
+        </p>
+
+        <a href="#planes" class="boton-principal">
+            VER PLANES
+        </a>
+
+    </section>
+
+
+    <section id="contacto" class="contacto">
+
+        <h2>¿Tienes alguna pregunta?</h2>
+
+        <p>
+            Comunícate con nosotros para conocer disponibilidad,
+            precios y condiciones.
+        </p>
+
+        <a
+            href="https://wa.me/573206564360"
+            target="_blank"
+            class="boton-whatsapp">
+
+            📲 CONTACTAR POR WHATSAPP
+
+        </a>
+
+    </section>
+
+
+</main>
+
+
+<footer>
+
+    <p>
+        © 2026 Finca Emanuel
+    </p>
+
+    <a href="index.html">
+        🐂 Volver a D'CASTRO
+    </a>
+
+</footer>
+
+
+<script>
+
+function reservar(plan) {
+
+    const mensaje =
+        "Hola, quiero información y disponibilidad para reservar en Finca Emanuel.%0A%0A" +
+        "🌿 Plan: " + encodeURIComponent(plan);
+
+    window.open(
+        "https://wa.me/573206564360?text=" + mensaje,
+        "_blank"
+    );
+
+}
+
+</script>
+
+
+</body>
+</html>
