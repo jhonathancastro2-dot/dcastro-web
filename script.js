@@ -43,7 +43,7 @@ if(producto=="Perros Calientes"){
 }
     if(producto=="Salchipapas"){
     botones=`
-   <button onclick="agregarCarrito('Salchipapa Personal',12000)">🍟 Salchipapa Personal - $10.000</button>
+   <button onclick="agregarCarrito('Salchipapa Personal',10000)">🍟 Salchipapa Personal - $10.000</button>
 
 <button onclick="agregarCarrito('Salchipapa Especial',18000)">🍟 Salchipapa Especial - $18.000</button>
 
