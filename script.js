@@ -15,14 +15,43 @@ function verOpciones(producto){
     }
 
     if(producto=="Hamburguesas"){
-        botones=`
-        <button onclick="agregarCarrito('Hamburguesa Clásica',15000)">🍔 Clásica - $15.000</button>
+    botones=`
 
-<button onclick="agregarCarrito('Hamburguesa Especial',18000)">🍔 Especial - $18.000</button>
+    <div class="producto-opcion">
+        <h3>🍔 Hamburguesa Clásica - $15.000</h3>
+        <p>
+            Pan • Carne de hamburguesa • Tomate • Lechuga •
+            Cebolla • Jamón • Queso
+        </p>
+        <button onclick="agregarCarrito('Hamburguesa Clásica',15000)">
+            🛒 Agregar al carrito
+        </button>
+    </div>
 
-<button onclick="agregarCarrito('Hamburguesa Doble',22000)">🍔 Doble - $22.000</button>
-        `;
-    }
+    <div class="producto-opcion">
+        <h3>🍔 Hamburguesa Especial - $18.000</h3>
+        <p>
+            Pan • Carne de hamburguesa • Tomate • Lechuga •
+            Cebolla • Jamón • Queso • Tocineta
+        </p>
+        <button onclick="agregarCarrito('Hamburguesa Especial',18000)">
+            🛒 Agregar al carrito
+        </button>
+    </div>
+
+    <div class="producto-opcion">
+        <h3>🍔 Hamburguesa Doble - $22.000</h3>
+        <p>
+            Pan • Doble carne de hamburguesa • Tomate •
+            Cebolla • Lechuga • Jamón • Queso • Tocineta
+        </p>
+        <button onclick="agregarCarrito('Hamburguesa Doble',22000)">
+            🛒 Agregar al carrito
+        </button>
+    </div>
+
+    `;
+}
 if(producto=="Perros Calientes"){
     botones=`
     <button onclick="agregarCarrito('Perro Tradicional',10000)">🌭 Perro Tradicional - $10.000</button>
@@ -320,6 +349,7 @@ function cambiarCantidad(nombre, cambio) {
 
     item.cantidad += cambio;
 
+    
     if (item.cantidad <= 0) {
         carrito = carrito.filter(p => p.nombre !== nombre);
     }
