@@ -97,13 +97,41 @@ if(producto=="Perros Calientes"){
 
     `;
 }
-    if(producto=="Salchipapas"){
+  if(producto=="Salchipapas"){
     botones=`
-   <button onclick="agregarCarrito('Salchipapa Personal',10000)">🍟 Salchipapa Personal - $10.000</button>
 
-<button onclick="agregarCarrito('Salchipapa Especial',18000)">🍟 Salchipapa Especial - $18.000</button>
+    <div class="producto-opcion">
+        <h3>🍟 Salchipapa Personal - $10.000</h3>
+        <p>
+            Salchicha • Papa • Ripio • Queso • Jamón • Salsa
+        </p>
+        <button onclick="agregarCarrito('Salchipapa Personal',10000)">
+            🛒 Agregar al carrito
+        </button>
+    </div>
 
-<button onclick="agregarCarrito('Salchipapa Mixta',25000)">🍟 Salchipapa Mixta - $25.000</button>
+    <div class="producto-opcion">
+        <h3>🍟 Salchipapa Especial - $18.000</h3>
+        <p>
+            Papa • Salchicha • Chorizo • Ripio • Queso •
+            Batavia • Salsas • Pollo desmechado
+        </p>
+        <button onclick="agregarCarrito('Salchipapa Especial',18000)">
+            🛒 Agregar al carrito
+        </button>
+    </div>
+
+    <div class="producto-opcion">
+        <h3>🍟 Salchipapa Especial - $25.000</h3>
+        <p>
+            Salchicha • Papa • Ripio • Salsa • Tocineta •
+            Costilla • Pollo desmechado • Queso
+        </p>
+        <button onclick="agregarCarrito('Salchipapa Especial $25.000',25000)">
+            🛒 Agregar al carrito
+        </button>
+    </div>
+
     `;
 }
     if(producto=="Pollo Broaster"){
