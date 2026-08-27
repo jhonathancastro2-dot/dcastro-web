@@ -80,7 +80,7 @@ if(producto=="Perros Calientes"){
 
     `;
 }
-
+if(producto=="Alitas de Pollo"){ botones= <button onclick="pedirWhatsApp('6 Alitas - $18.000')">🍗 6 Alitas - $18.000</button> <button onclick="pedirWhatsApp('12 Alitas - $32.000')">🍗 12 Alitas - $32.000</button> <button onclick="pedirWhatsApp('24 Alitas - $58.000')">🍗 24 Alitas - $58.000</button> ; }
   if(producto=="Salchipapas"){
     botones=`
 
