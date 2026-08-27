@@ -286,7 +286,85 @@ function reservar(plan) {
 }
 
 </script>
+<section id="reservas" class="reservas">
+    <h2>🌿 Reserva tu experiencia en Finca Emanuel</h2>
 
+    <p>
+        Elige tu plan, selecciona la fecha y déjanos tus datos.
+        Nos pondremos en contacto contigo para confirmar tu reserva.
+    </p>
+
+    <form id="formReserva">
+
+        <label for="nombre">👤 Nombre completo</label>
+        <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            placeholder="Escribe tu nombre"
+            required
+        >
+
+        <label for="telefono">📞 Teléfono / WhatsApp</label>
+        <input
+            type="tel"
+            id="telefono"
+            name="telefono"
+            placeholder="Ej: 320 000 0000"
+            required
+        >
+
+        <label for="servicio">🌿 Selecciona el plan</label>
+        <select id="servicio" name="servicio" required>
+            <option value="">Selecciona una opción</option>
+            <option value="Pasadía">Pasadía</option>
+            <option value="Cancha">Cancha - 1 hora</option>
+            <option value="Camping">Camping</option>
+            <option value="Glamping">Glamping</option>
+            <option value="Evento">Evento</option>
+            <option value="Pesca">Pesca</option>
+        </select>
+
+        <label for="fecha">📅 Fecha de la reserva</label>
+        <input
+            type="date"
+            id="fecha"
+            name="fecha"
+            required
+        >
+
+        <label for="hora">🕐 Hora</label>
+        <input
+            type="time"
+            id="hora"
+            name="hora"
+            required
+        >
+
+        <label for="personas">👥 Número de personas</label>
+        <input
+            type="number"
+            id="personas"
+            name="personas"
+            min="1"
+            value="1"
+            required
+        >
+
+        <label for="observaciones">📝 Observaciones</label>
+        <textarea
+            id="observaciones"
+            name="observaciones"
+            rows="4"
+            placeholder="Cuéntanos si tienes alguna solicitud especial..."
+        ></textarea>
+
+        <button type="submit">
+            📲 Solicitar reserva
+        </button>
+
+    </form>
+</section>
 
 </body>
 </html>
