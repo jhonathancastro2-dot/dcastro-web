@@ -1,170 +1,197 @@
 let numeroPedido = parseInt(localStorage.getItem("numeroPedido")) || 1;
 function verOpciones(producto){
 
-    document.getElementById("ventanaMenu").style.display="flex";
-    document.getElementById("tituloProducto").innerHTML=producto;
+    document.getElementById("ventanaMenu").style.display = "flex";
+    document.getElementById("tituloProducto").innerHTML = producto;
 
-    let botones="";
+    let botones = "";
 
-if(producto=="Perros Calientes"){
-    botones=`
+    if(producto == "Alitas de Pollo"){
+        botones = `
+            <button onclick="agregarCarrito('6 Alitas',18000)">
+                🍗 6 Alitas - $18.000
+            </button>
 
-    <div class="producto-opcion">
-        <h3>🌭 Perro Tradicional - $10.000</h3>
-        <p>
-            Pan • Salchicha • Ripio • Cebolla • Salsas
-        </p>
-        <button onclick="agregarCarrito('Perro Tradicional',10000)">
-            🛒 Agregar al carrito
-        </button>
-    </div>
+            <button onclick="agregarCarrito('12 Alitas',32000)">
+                🍗 12 Alitas - $32.000
+            </button>
 
-    <div class="producto-opcion">
-        <h3>🌭 Perro Especial - $14.000</h3>
-        <p>
-            Pan • Salchicha • Ripio • Salsas • Cebolla • Tocineta
-        </p>
-        <button onclick="agregarCarrito('Perro Especial',14000)">
-            🛒 Agregar al carrito
-        </button>
-    </div>
+            <button onclick="agregarCarrito('24 Alitas',58000)">
+                🍗 24 Alitas - $58.000
+            </button>
+        `;
+    }
 
-    <div class="producto-opcion">
-        <h3>🌭 Perro Súper - $18.000</h3>
-        <p>
-            Pan • Salchicha • Ripio • Salsas • Pollo desmechado •
-            Tocineta • Queso gratinado
-        </p>
-        <button onclick="agregarCarrito('Perro Súper',18000)">
-            🛒 Agregar al carrito
-        </button>
-    </div>
+    if(producto == "Hamburguesas"){
+        botones = `
+            <button onclick="agregarCarrito('Hamburguesa Clásica',15000)">
+                🍔 Clásica - $15.000
+            </button>
 
-    `;
+            <button onclick="agregarCarrito('Hamburguesa Especial',18000)">
+                🍔 Especial - $18.000
+            </button>
+
+            <button onclick="agregarCarrito('Hamburguesa Doble',22000)">
+                🍔 Doble - $22.000
+            </button>
+        `;
+    }
+
+    if(producto == "Perros Calientes"){
+        botones = `
+            <button onclick="agregarCarrito('Perro Tradicional',10000)">
+                🌭 Perro Tradicional - $10.000
+            </button>
+
+            <button onclick="agregarCarrito('Perro Especial',14000)">
+                🌭 Perro Especial - $14.000
+            </button>
+
+            <button onclick="agregarCarrito('Perro Súper',18000)">
+                🌭 Perro Súper - $18.000
+            </button>
+        `;
+    }
+
+    if(producto == "Sandwiches"){
+        botones = `
+            <button onclick="agregarCarrito('Sándwich Clásico',13000)">
+                🥪 Sándwich Clásico - $13.000
+            </button>
+
+            <button onclick="agregarCarrito('Sándwich Especial',16000)">
+                🥪 Sándwich Especial - $16.000
+            </button>
+
+            <button onclick="agregarCarrito('Sándwich Doble',20000)">
+                🥪 Sándwich Doble - $20.000
+            </button>
+        `;
+    }
+
+    if(producto == "Salchipapas"){
+        botones = `
+            <button onclick="agregarCarrito('Salchipapa Personal',10000)">
+                🍟 Salchipapa Personal - $10.000
+            </button>
+
+            <button onclick="agregarCarrito('Salchipapa Especial',18000)">
+                🍟 Salchipapa Especial - $18.000
+            </button>
+
+            <button onclick="agregarCarrito('Salchipapa Mixta',25000)">
+                🍟 Salchipapa Mixta - $25.000
+            </button>
+        `;
+    }
+
+    if(producto == "Pollo Broaster"){
+        botones = `
+            <button onclick="agregarCarrito('1 Presa Broaster',5000)">
+                🍗 1 Presa - $5.000
+            </button>
+
+            <button onclick="agregarCarrito('2 Presas Broaster + Papas + Gaseosa',14000)">
+                🍗 2 Presas + Papas + Gaseosa - $14.000
+            </button>
+
+            <button onclick="agregarCarrito('4 Presas Broaster',20000)">
+                🍗 4 Presas - $20.000
+            </button>
+
+            <button onclick="agregarCarrito('Broaster Familiar',38000)">
+                🍗 Broaster Familiar - $38.000
+            </button>
+        `;
+    }
+
+    if(producto == "Bebidas"){
+        botones = `
+            <button onclick="agregarCarrito('Gaseosa Personal',3500)">
+                🥤 Gaseosa Personal - $3.500
+            </button>
+
+            <button onclick="agregarCarrito('Agua',2000)">
+                💧 Agua - $2.000
+            </button>
+
+            <button onclick="agregarCarrito('Jugo en Agua',6000)">
+                🧃 Jugo en Agua - $6.000
+            </button>
+
+            <button onclick="agregarCarrito('Jugo en Leche',10000)">
+                🥛 Jugo en Leche - $10.000
+            </button>
+
+            <button onclick="agregarCarrito('Limonada Natural',6000)">
+                🍋 Limonada Natural - $6.000
+            </button>
+
+            <button onclick="agregarCarrito('Limonada Grande',12000)">
+                🍋 Limonada Grande - $12.000
+            </button>
+
+            <button onclick="agregarCarrito('Milo',6000)">
+                🍫 Milo - $6.000
+            </button>
+
+            <button onclick="agregarCarrito('Capuchino',7000)">
+                ☕ Capuchino - $7.000
+            </button>
+        `;
+    }
+
+    if(producto == "Almuerzos"){
+        botones = `
+            <button onclick="agregarCarrito('Almuerzo del Día',10000)">
+                🍛 Almuerzo del Día - $10.000
+            </button>
+
+            <button onclick="agregarCarrito('Almuerzo Especial',15000)">
+                🥩 Almuerzo Especial - $15.000
+            </button>
+        `;
+    }
+
+    if(producto == "Parrilla"){
+        botones = `
+            <button onclick="agregarCarrito('Pincho de Res',14000)">
+                🥩 Pincho de Res - $14.000
+            </button>
+
+            <button onclick="agregarCarrito('Pincho de Cerdo',14000)">
+                🐖 Pincho de Cerdo - $14.000
+            </button>
+
+            <button onclick="agregarCarrito('Pincho de Pollo',14000)">
+                🍗 Pincho de Pollo - $14.000
+            </button>
+
+            <button onclick="agregarCarrito('Churrasco',33900)">
+                🥩 Churrasco - $33.900
+            </button>
+
+            <button onclick="agregarCarrito('Parrillada Argentina',33900)">
+                🔥 Parrillada Argentina - $33.900
+            </button>
+
+            <button onclick="agregarCarrito('Chorizos',0)">
+                🌭 Chorizos
+            </button>
+
+            <button onclick="agregarCarrito('Punta de Anca',0)">
+                🥩 Punta de Anca
+            </button>
+
+            <button onclick="agregarCarrito('Filete Gratinado',26000)">
+                🧀 Filete Gratinado - $26.000
+            </button>
+        `;
+    }
+
+    document.getElementById("opcionesProducto").innerHTML = botones;
 }
-    if(producto=="Hamburguesas"){
-    botones=`
-
-    <div class="producto-opcion">
-        <h3>🍔 Hamburguesa Clásica - $15.000</h3>
-        <p>
-            Pan • Carne de hamburguesa • Tomate • Lechuga •
-            Cebolla • Jamón • Queso
-        </p>
-        <button onclick="agregarCarrito('Hamburguesa Clásica',15000)">
-            🛒 Agregar al carrito
-        </button>
-    </div>
-
-    <div class="producto-opcion">
-        <h3>🍔 Hamburguesa Especial - $18.000</h3>
-        <p>
-            Pan • Carne de hamburguesa • Tomate • Lechuga •
-            Cebolla • Jamón • Queso • Tocineta
-        </p>
-        <button onclick="agregarCarrito('Hamburguesa Especial',18000)">
-            🛒 Agregar al carrito
-        </button>
-    </div>
-
-    <div class="producto-opcion">
-        <h3>🍔 Hamburguesa Doble - $22.000</h3>
-        <p>
-            Pan • Doble carne de hamburguesa • Tomate •
-            Cebolla • Lechuga • Jamón • Queso • Tocineta
-        </p>
-        <button onclick="agregarCarrito('Hamburguesa Doble',22000)">
-            🛒 Agregar al carrito
-        </button>
-    </div>
-
-    `;
-}
-if(producto=="Alitas de Pollo"){ botones= <button onclick="pedirWhatsApp('6 Alitas - $18.000')">🍗 6 Alitas - $18.000</button> <button onclick="pedirWhatsApp('12 Alitas - $32.000')">🍗 12 Alitas - $32.000</button> <button onclick="pedirWhatsApp('24 Alitas - $58.000')">🍗 24 Alitas - $58.000</button> ; }
-  if(producto=="Salchipapas"){
-    botones=`
-
-    <div class="producto-opcion">
-        <h3>🍟 Salchipapa Personal - $10.000</h3>
-        <p>
-            Salchicha • Papa • Ripio • Queso • Jamón • Salsa
-        </p>
-        <button onclick="agregarCarrito('Salchipapa Personal',10000)">
-            🛒 Agregar al carrito
-        </button>
-    </div>
-
-    <div class="producto-opcion">
-        <h3>🍟 Salchipapa Especial - $18.000</h3>
-        <p>
-            Papa • Salchicha • Chorizo • Ripio • Queso •
-            Batavia • Salsas • Pollo desmechado
-        </p>
-        <button onclick="agregarCarrito('Salchipapa Especial',18000)">
-            🛒 Agregar al carrito
-        </button>
-    </div>
-
-    <div class="producto-opcion">
-        <h3>🍟 Salchipapa Especial - $25.000</h3>
-        <p>
-            Salchicha • Papa • Ripio • Salsa • Tocineta •
-            Costilla • Pollo desmechado • Queso
-        </p>
-        <button onclick="agregarCarrito('Salchipapa Especial $25.000',25000)">
-            🛒 Agregar al carrito
-        </button>
-    </div>
-
-    `;
-}
-    if(producto=="Pollo Broaster"){
-    botones=`
-    <button onclick="agregarCarrito('1 Presa Broaster',5000)">🍗 1 Presa - $5.000</button>
-
-<button onclick="agregarCarrito('2 Presas Broaster + Papas + Gaseosa',14000)">🍗 2 Presas + Papas + Gaseosa - $14.000</button>
-
-<button onclick="agregarCarrito('4 Presas Broaster',20000)">🍗 4 Presas - $20.000</button>
-
-<button onclick="agregarCarrito('Broaster Familiar',38000)">🍗 Broaster Familiar - $38.000</button>
-    `;
-}
-    
-    if (producto == "Bebidas") {
-    botones = `
-    <button onclick="agregarCarrito('Gaseosa Personal',3500)">🥤 Gaseosa Personal - $3.500</button>
-    <button onclick="agregarCarrito('Agua',2000)">💧 Agua - $2.000</button>
-    <button onclick="agregarCarrito('Jugo en Agua',6000)">🧃 Jugo en Agua - $6.000</button>
-    <button onclick="agregarCarrito('Jugo en Leche',10000)">🥛 Jugo en Leche - $10.000</button>
-    <button onclick="agregarCarrito('Limonada Natural',6000)">🍋 Limonada Natural - $6.000</button>
-    <button onclick="agregarCarrito('Limonada Grande',12000)">🍋 Limonada Grande - $12.000</button>
-    <button onclick="agregarCarrito('Milo',6000)">🍫 Milo - $6.000</button>
-    <button onclick="agregarCarrito('Capuchino',7000)">☕ Capuchino - $7.000</button>
-    `;
-}
-    
-    if (producto == "Almuerzos") {
-    botones = `
-    <button onclick="agregarCarrito('Almuerzo del Día',10000)">🍛 Almuerzo del Día - $10.000</button>
-
-<button onclick="agregarCarrito('Almuerzo Especial',15000)">🥩 Almuerzo Especial - $15.000</button>
-    `;
-}
-    if(producto=="Parrilla"){
-  botones=`
-<button onclick="agregarCarrito('Pincho de Res',14000)">🥩 Pincho de Res - $14.000</button>
-<button onclick="pedirWhatsApp('Pincho de Cerdo - $14.000')">🐖 Pincho de Cerdo - $14.000</button>
-<button onclick="pedirWhatsApp('Pincho de Pollo - $14.000')">🍗 Pincho de Pollo - $14.000</button>
-<button onclick="pedirWhatsApp('Churrasco - $33.900')">🥩 Churrasco - $33.900</button>
-<button onclick="pedirWhatsApp('Parrillada Argentina - $33.900')">🔥 Parrillada Argentina - $33.900</button>
-<button onclick="pedirWhatsApp('Chorizos')">🌭 Chorizos</button>
-<button onclick="pedirWhatsApp('Punta de Anca')">🥩 Punta de Anca</button>
-<button onclick="pedirWhatsApp('Filete Gratinado - $26.000')">🧀 Filete Gratinado - $26.000</button>
-`;
-}
-    document.getElementById("opcionesProducto").innerHTML=botones;
-}
-
 function cerrarVentana(){
     document.getElementById("ventanaMenu").style.display="none";
 }
