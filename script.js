@@ -5,7 +5,42 @@ function verOpciones(producto){
     document.getElementById("tituloProducto").innerHTML=producto;
 
     let botones="";
+if(producto=="Sandwiches"){
+    botones=`
 
+    <div class="producto-opcion">
+        <h3>🥪 Sándwich Clásico - $13.000</h3>
+        <p>
+            Pan • Queso • Jamón • Batavia • Tomate
+        </p>
+        <button onclick="agregarCarrito('Sándwich Clásico',13000)">
+            🛒 Agregar al carrito
+        </button>
+    </div>
+
+    <div class="producto-opcion">
+        <h3>🥪 Sándwich Especial - $16.000</h3>
+        <p>
+            Pan • Queso • Jamón • Batavia • Tomate • Ripio • Pollo desmechado
+        </p>
+        <button onclick="agregarCarrito('Sándwich Especial',16000)">
+            🛒 Agregar al carrito
+        </button>
+    </div>
+
+    <div class="producto-opcion">
+        <h3>🥪 Sándwich Doble - $20.000</h3>
+        <p>
+            Pan • Queso doble • Jamón • Batavia • Pollo desmechado •
+            Carne desmechada • Tomate
+        </p>
+        <button onclick="agregarCarrito('Sándwich Doble',20000)">
+            🛒 Agregar al carrito
+        </button>
+    </div>
+
+    `;
+}
 if(producto=="Perros Calientes"){
     botones=`
 
