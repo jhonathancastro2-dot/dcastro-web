@@ -6,7 +6,42 @@ function verOpciones(producto){
 
     let botones="";
 }
+if(producto=="Perros Calientes"){
+    botones=`
 
+    <div class="producto-opcion">
+        <h3>🌭 Perro Tradicional - $10.000</h3>
+        <p>
+            Pan • Salchicha • Ripio • Cebolla • Salsas
+        </p>
+        <button onclick="agregarCarrito('Perro Tradicional',10000)">
+            🛒 Agregar al carrito
+        </button>
+    </div>
+
+    <div class="producto-opcion">
+        <h3>🌭 Perro Especial - $14.000</h3>
+        <p>
+            Pan • Salchicha • Ripio • Salsas • Cebolla • Tocineta
+        </p>
+        <button onclick="agregarCarrito('Perro Especial',14000)">
+            🛒 Agregar al carrito
+        </button>
+    </div>
+
+    <div class="producto-opcion">
+        <h3>🌭 Perro Súper - $18.000</h3>
+        <p>
+            Pan • Salchicha • Ripio • Salsas • Pollo desmechado •
+            Tocineta • Queso gratinado
+        </p>
+        <button onclick="agregarCarrito('Perro Súper',18000)">
+            🛒 Agregar al carrito
+        </button>
+    </div>
+
+    `;
+}
     if(producto=="Hamburguesas"){
     botones=`
 
