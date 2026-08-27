@@ -6,42 +6,8 @@ function verOpciones(producto){
 
     let botones="";
 }
-if(producto=="Perros Calientes"){
-    botones=`
+if(producto=="Alitas de Pollo"){ botones= <button onclick="pedirWhatsApp('6 Alitas - $18.000')">🍗 6 Alitas - $18.000</button> <button onclick="pedirWhatsApp('12 Alitas - $32.000')">🍗 12 Alitas - $32.000</button> <button onclick="pedirWhatsApp('24 Alitas - $58.000')">🍗 24 Alitas - $58.000</button> ; }
 
-    <div class="producto-opcion">
-        <h3>🌭 Perro Tradicional - $10.000</h3>
-        <p>
-            Pan • Salchicha • Ripio • Cebolla • Salsas
-        </p>
-        <button onclick="agregarCarrito('Perro Tradicional',10000)">
-            🛒 Agregar al carrito
-        </button>
-    </div>
-
-    <div class="producto-opcion">
-        <h3>🌭 Perro Especial - $14.000</h3>
-        <p>
-            Pan • Salchicha • Ripio • Salsas • Cebolla • Tocineta
-        </p>
-        <button onclick="agregarCarrito('Perro Especial',14000)">
-            🛒 Agregar al carrito
-        </button>
-    </div>
-
-    <div class="producto-opcion">
-        <h3>🌭 Perro Súper - $18.000</h3>
-        <p>
-            Pan • Salchicha • Ripio • Salsas • Pollo desmechado •
-            Tocineta • Queso gratinado
-        </p>
-        <button onclick="agregarCarrito('Perro Súper',18000)">
-            🛒 Agregar al carrito
-        </button>
-    </div>
-
-    `;
-}
     if(producto=="Hamburguesas"){
     botones=`
 
