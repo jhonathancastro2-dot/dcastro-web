@@ -22,69 +22,156 @@ function verOpciones(producto){
         `;
     }
 
-    if(producto == "Hamburguesas"){
-        botones = `
-            <button onclick="agregarCarrito('Hamburguesa Clásica',15000)">
-                🍔 Clásica - $15.000
-            </button>
+    if(producto=="Hamburguesas"){
+    botones=`
 
-            <button onclick="agregarCarrito('Hamburguesa Especial',18000)">
-                🍔 Especial - $18.000
-            </button>
+    <div class="producto-opcion">
+        <h3>🍔 Hamburguesa Clásica - $15.000</h3>
+        <p>
+            Pan • Carne de hamburguesa • Tomate • Lechuga •
+            Cebolla • Jamón • Queso
+        </p>
+        <button onclick="agregarCarrito('Hamburguesa Clásica',15000)">
+            🛒 Agregar al carrito
+        </button>
+    </div>
 
-            <button onclick="agregarCarrito('Hamburguesa Doble',22000)">
-                🍔 Doble - $22.000
-            </button>
-        `;
-    }
+    <div class="producto-opcion">
+        <h3>🍔 Hamburguesa Especial - $18.000</h3>
+        <p>
+            Pan • Carne de hamburguesa • Tomate • Lechuga •
+            Cebolla • Jamón • Queso • Tocineta
+        </p>
+        <button onclick="agregarCarrito('Hamburguesa Especial',18000)">
+            🛒 Agregar al carrito
+        </button>
+    </div>
 
-    if(producto == "Perros Calientes"){
-        botones = `
-            <button onclick="agregarCarrito('Perro Tradicional',10000)">
-                🌭 Perro Tradicional - $10.000
-            </button>
+    <div class="producto-opcion">
+        <h3>🍔 Hamburguesa Doble - $22.000</h3>
+        <p>
+            Pan • Doble carne de hamburguesa • Tomate •
+            Cebolla • Lechuga • Jamón • Queso • Tocineta
+        </p>
+        <button onclick="agregarCarrito('Hamburguesa Doble',22000)">
+            🛒 Agregar al carrito
+        </button>
+    </div>
 
-            <button onclick="agregarCarrito('Perro Especial',14000)">
-                🌭 Perro Especial - $14.000
-            </button>
+    `;
+}
 
-            <button onclick="agregarCarrito('Perro Súper',18000)">
-                🌭 Perro Súper - $18.000
-            </button>
-        `;
-    }
+    if(producto=="Perros Calientes"){
+    botones=`
 
-    if(producto == "Sandwiches"){
-        botones = `
-            <button onclick="agregarCarrito('Sándwich Clásico',13000)">
-                🥪 Sándwich Clásico - $13.000
-            </button>
+    <div class="producto-opcion">
+        <h3>🌭 Perro Tradicional - $10.000</h3>
+        <p>
+            Pan • Salchicha • Ripio • Cebolla • Salsas
+        </p>
+        <button onclick="agregarCarrito('Perro Tradicional',10000)">
+            🛒 Agregar al carrito
+        </button>
+    </div>
 
-            <button onclick="agregarCarrito('Sándwich Especial',16000)">
-                🥪 Sándwich Especial - $16.000
-            </button>
+    <div class="producto-opcion">
+        <h3>🌭 Perro Especial - $14.000</h3>
+        <p>
+            Pan • Salchicha • Ripio • Salsas • Cebolla • Tocineta
+        </p>
+        <button onclick="agregarCarrito('Perro Especial',14000)">
+            🛒 Agregar al carrito
+        </button>
+    </div>
 
-            <button onclick="agregarCarrito('Sándwich Doble',20000)">
-                🥪 Sándwich Doble - $20.000
-            </button>
-        `;
-    }
+    <div class="producto-opcion">
+        <h3>🌭 Perro Súper - $18.000</h3>
+        <p>
+            Pan • Salchicha • Ripio • Salsas • Pollo desmechado •
+            Tocineta • Queso gratinado
+        </p>
+        <button onclick="agregarCarrito('Perro Súper',18000)">
+            🛒 Agregar al carrito
+        </button>
+    </div>
 
-    if(producto == "Salchipapas"){
-        botones = `
-            <button onclick="agregarCarrito('Salchipapa Personal',10000)">
-                🍟 Salchipapa Personal - $10.000
-            </button>
+    `;
+}
 
-            <button onclick="agregarCarrito('Salchipapa Especial',18000)">
-                🍟 Salchipapa Especial - $18.000
-            </button>
+    if(producto=="Sandwiches"){
+    botones=`
 
-            <button onclick="agregarCarrito('Salchipapa Mixta',25000)">
-                🍟 Salchipapa Mixta - $25.000
-            </button>
-        `;
-    }
+    <div class="producto-opcion">
+        <h3>🥪 Sándwich Clásico - $13.000</h3>
+        <p>
+            Pan • Queso • Jamón • Batavia • Tomate
+        </p>
+        <button onclick="agregarCarrito('Sándwich Clásico',13000)">
+            🛒 Agregar al carrito
+        </button>
+    </div>
+
+    <div class="producto-opcion">
+        <h3>🥪 Sándwich Especial - $16.000</h3>
+        <p>
+            Pan • Queso • Jamón • Batavia • Tomate • Ripio • Pollo desmechado
+        </p>
+        <button onclick="agregarCarrito('Sándwich Especial',16000)">
+            🛒 Agregar al carrito
+        </button>
+    </div>
+
+    <div class="producto-opcion">
+        <h3>🥪 Sándwich Doble - $20.000</h3>
+        <p>
+            Pan • Queso doble • Jamón • Batavia • Pollo desmechado •
+            Carne desmechada • Tomate
+        </p>
+        <button onclick="agregarCarrito('Sándwich Doble',20000)">
+            🛒 Agregar al carrito
+        </button>
+    </div>
+
+    `;
+}
+
+   if(producto=="Salchipapas"){
+    botones=`
+
+    <div class="producto-opcion">
+        <h3>🍟 Salchipapa Personal - $10.000</h3>
+        <p>
+            Salchicha • Papa • Ripio • Queso • Jamón • Salsa
+        </p>
+        <button onclick="agregarCarrito('Salchipapa Personal',10000)">
+            🛒 Agregar al carrito
+        </button>
+    </div>
+
+    <div class="producto-opcion">
+        <h3>🍟 Salchipapa Especial - $18.000</h3>
+        <p>
+            Papa • Salchicha • Chorizo • Ripio • Queso •
+            Batavia • Salsas • Pollo desmechado
+        </p>
+        <button onclick="agregarCarrito('Salchipapa Especial',18000)">
+            🛒 Agregar al carrito
+        </button>
+    </div>
+
+    <div class="producto-opcion">
+        <h3>🍟 Salchipapa Especial - $25.000</h3>
+        <p>
+            Salchicha • Papa • Ripio • Salsa • Tocineta •
+            Costilla • Pollo desmechado • Queso
+        </p>
+        <button onclick="agregarCarrito('Salchipapa Especial $25.000',25000)">
+            🛒 Agregar al carrito
+        </button>
+    </div>
+
+    `;
+}
 
     if(producto == "Pollo Broaster"){
         botones = `
