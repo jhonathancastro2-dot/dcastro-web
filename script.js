@@ -5,7 +5,7 @@ function verOpciones(producto){
     document.getElementById("tituloProducto").innerHTML=producto;
 
     let botones="";
-}
+
 if(producto=="Perros Calientes"){
     botones=`
 
