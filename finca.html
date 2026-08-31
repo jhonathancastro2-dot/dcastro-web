@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -46,6 +47,8 @@
 
 <main id="inicio">
 
+    <!-- PRESENTACIÓN -->
+
     <section class="presentacion">
 
         <h2>Bienvenidos a Finca Emanuel</h2>
@@ -58,6 +61,8 @@
 
     </section>
 
+
+    <!-- PLANES -->
 
     <section id="planes" class="planes">
 
@@ -217,90 +222,187 @@
     </section>
 
 
+    <!-- RESERVAS -->
+
     <section id="reservas" class="seccion-reservas">
 
-        <h2>Reserva tu experiencia</h2>
+        <div class="contenedor-reserva">
 
-        <p>
-            Selecciona uno de nuestros planes y solicita
-            tu reserva.
-        </p>
-<form id="formReserva">
+            <h2>🌿 Reserva tu experiencia</h2>
 
-    <label for="nombre">👤 Nombre completo</label>
-    <input
-        type="text"
-        id="nombre"
-        name="nombre"
-        placeholder="Escribe tu nombre"
-        required
-    >
+            <p class="texto-reserva">
+                Selecciona tu plan, déjanos tus datos y te
+                contactaremos para confirmar disponibilidad.
+            </p>
 
-    <label for="telefono">📞 Teléfono / WhatsApp</label>
-    <input
-        type="tel"
-        id="telefono"
-        name="telefono"
-        placeholder="Ej: 320 000 0000"
-        required
-    >
 
-    <label for="servicio">🌿 Selecciona el plan</label>
-    <select id="servicio" name="servicio" required>
-        <option value="">Selecciona una opción</option>
-        <option value="Pasadía">Pasadía</option>
-        <option value="Cancha">Cancha - 1 hora</option>
-        <option value="Camping">Camping</option>
-        <option value="Glamping">Glamping</option>
-        <option value="Evento">Evento</option>
-        <option value="Pesca">Pesca</option>
-    </select>
+            <form id="formReserva">
 
-    <label for="fecha">📅 Fecha de la reserva</label>
-    <input
-        type="date"
-        id="fecha"
-        name="fecha"
-        required
-    >
 
-    <label for="hora">🕐 Hora</label>
-    <input
-        type="time"
-        id="hora"
-        name="hora"
-        required
-    >
+                <div class="campo">
 
-    <label for="personas">👥 Número de personas</label>
-    <input
-        type="number"
-        id="personas"
-        name="personas"
-        min="1"
-        value="1"
-        required
-    >
+                    <label for="nombre">
+                        👤 Nombre completo
+                    </label>
 
-    <label for="observaciones">📝 Observaciones</label>
-    <textarea
-        id="observaciones"
-        name="observaciones"
-        rows="4"
-        placeholder="Cuéntanos si tienes alguna solicitud especial..."
-    ></textarea>
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Escribe tu nombre"
+                        required
+                    >
 
-    <button type="submit">
-        📲 Solicitar reserva
-    </button>
+                </div>
 
-</form>
-        <a href="#planes" class="boton-principal">
-            VER PLANES
-        </a>
+
+                <div class="campo">
+
+                    <label for="telefono">
+                        📞 Teléfono / WhatsApp
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="telefono"
+                        name="telefono"
+                        placeholder="Ej: 320 000 0000"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="servicio">
+                        🌿 Selecciona el plan
+                    </label>
+
+                    <select
+                        id="servicio"
+                        name="servicio"
+                        required
+                    >
+
+                        <option value="">
+                            Selecciona una opción
+                        </option>
+
+                        <option value="Pasadía">
+                            Pasadía
+                        </option>
+
+                        <option value="Cancha - 1 hora">
+                            Cancha - 1 hora
+                        </option>
+
+                        <option value="Camping">
+                            Camping
+                        </option>
+
+                        <option value="Glamping">
+                            Glamping
+                        </option>
+
+                        <option value="Evento">
+                            Evento
+                        </option>
+
+                        <option value="Pesca">
+                            Pesca
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="fila-reserva">
+
+                    <div class="campo">
+
+                        <label for="fecha">
+                            📅 Fecha de la reserva
+                        </label>
+
+                        <input
+                            type="date"
+                            id="fecha"
+                            name="fecha"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="hora">
+                            🕐 Hora
+                        </label>
+
+                        <input
+                            type="time"
+                            id="hora"
+                            name="hora"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="personas">
+                        👥 Número de personas
+                    </label>
+
+                    <input
+                        type="number"
+                        id="personas"
+                        name="personas"
+                        min="1"
+                        value="1"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="observaciones">
+                        📝 Observaciones
+                    </label>
+
+                    <textarea
+                        id="observaciones"
+                        name="observaciones"
+                        rows="4"
+                        placeholder="Cuéntanos si tienes alguna solicitud especial..."
+                    ></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="boton-reserva"
+                >
+                    📲 SOLICITAR RESERVA
+                </button>
+
+            </form>
+
+        </div>
 
     </section>
 
+
+    <!-- CONTACTO -->
 
     <section id="contacto" class="contacto">
 
@@ -314,10 +416,9 @@
         <a
             href="https://wa.me/573206564360"
             target="_blank"
-            class="boton-whatsapp">
-
+            class="boton-whatsapp"
+        >
             📲 CONTACTAR POR WHATSAPP
-
         </a>
 
     </section>
@@ -341,99 +442,95 @@
 
 <script>
 
+
+// RESERVAR DESDE LAS TARJETAS
+
 function reservar(plan) {
 
+    document.getElementById("servicio").value = plan;
+
+    document.getElementById("reservas").scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
+
+
+// ENVIAR FORMULARIO A WHATSAPP
+
+document.getElementById("formReserva").addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const nombre =
+        document.getElementById("nombre").value;
+
+    const telefono =
+        document.getElementById("telefono").value;
+
+    const servicio =
+        document.getElementById("servicio").value;
+
+    const fecha =
+        document.getElementById("fecha").value;
+
+    const hora =
+        document.getElementById("hora").value;
+
+    const personas =
+        document.getElementById("personas").value;
+
+    const observaciones =
+        document.getElementById("observaciones").value;
+
+
     const mensaje =
-        "Hola, quiero información y disponibilidad para reservar en Finca Emanuel.%0A%0A" +
-        "🌿 Plan: " + encodeURIComponent(plan);
+        "🌿 *SOLICITUD DE RESERVA - FINCA EMANUEL*%0A%0A" +
+
+        "👤 Nombre: " +
+        encodeURIComponent(nombre) +
+
+        "%0A📞 Teléfono: " +
+        encodeURIComponent(telefono) +
+
+        "%0A🌿 Plan: " +
+        encodeURIComponent(servicio) +
+
+        "%0A📅 Fecha: " +
+        encodeURIComponent(fecha) +
+
+        "%0A🕐 Hora: " +
+        encodeURIComponent(hora) +
+
+        "%0A👥 Personas: " +
+        encodeURIComponent(personas) +
+
+        "%0A📝 Observaciones: " +
+        encodeURIComponent(observaciones);
+
 
     window.open(
         "https://wa.me/573206564360?text=" + mensaje,
         "_blank"
     );
 
-}
+});
+
+
+// NO PERMITIR FECHAS ANTERIORES A HOY
+
+const fechaInput =
+    document.getElementById("fecha");
+
+const hoy =
+    new Date().toISOString().split("T")[0];
+
+fechaInput.min = hoy;
+
 
 </script>
-<section id="reservas" class="reservas">
-    <h2>🌿 Reserva tu experiencia en Finca Emanuel</h2>
 
-    <p>
-        Elige tu plan, selecciona la fecha y déjanos tus datos.
-        Nos pondremos en contacto contigo para confirmar tu reserva.
-    </p>
-
-<form id="formReserva" style="display:block !important;">
-
-        <label for="nombre">👤 Nombre completo</label>
-        <input
-            type="text"
-            id="nombre"
-            name="nombre"
-            placeholder="Escribe tu nombre"
-            required
-        >
-
-        <label for="telefono">📞 Teléfono / WhatsApp</label>
-        <input
-            type="tel"
-            id="telefono"
-            name="telefono"
-            placeholder="Ej: 320 000 0000"
-            required
-        >
-
-        <label for="servicio">🌿 Selecciona el plan</label>
-        <select id="servicio" name="servicio" required>
-            <option value="">Selecciona una opción</option>
-            <option value="Pasadía">Pasadía</option>
-            <option value="Cancha">Cancha - 1 hora</option>
-            <option value="Camping">Camping</option>
-            <option value="Glamping">Glamping</option>
-            <option value="Evento">Evento</option>
-            <option value="Pesca">Pesca</option>
-        </select>
-
-        <label for="fecha">📅 Fecha de la reserva</label>
-        <input
-            type="date"
-            id="fecha"
-            name="fecha"
-            required
-        >
-
-        <label for="hora">🕐 Hora</label>
-        <input
-            type="time"
-            id="hora"
-            name="hora"
-            required
-        >
-
-        <label for="personas">👥 Número de personas</label>
-        <input
-            type="number"
-            id="personas"
-            name="personas"
-            min="1"
-            value="1"
-            required
-        >
-
-        <label for="observaciones">📝 Observaciones</label>
-        <textarea
-            id="observaciones"
-            name="observaciones"
-            rows="4"
-            placeholder="Cuéntanos si tienes alguna solicitud especial..."
-        ></textarea>
-
-        <button type="submit">
-            📲 Solicitar reserva
-        </button>
-
-    </form>
-</section>
 
 </body>
 </html>
+```
