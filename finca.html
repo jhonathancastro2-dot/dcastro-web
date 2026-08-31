@@ -269,21 +269,30 @@
             <form id="formReserva">
 
 
-                <div class="campo">
+               <div class="campo">
 
-                    <label for="nombre">
-                        👤 Nombre completo
-                    </label>
+    <label for="personas">
+        👥 Número de personas
+    </label>
 
-                    <input
-                        type="text"
-                        id="nombre"
-                        name="nombre"
-                        placeholder="Escribe tu nombre"
-                        required
-                    >
+    <input
+        type="number"
+        id="personas"
+        name="personas"
+        min="1"
+        value="1"
+        required
+    >
 
-                </div>
+</div>
+
+
+<div id="resultadoPrecio" class="resultado-precio">
+
+    💰 Selecciona un plan y la cantidad de personas
+    para calcular el valor.
+
+</div>
 
 
               
