@@ -297,3 +297,29 @@ footer a {
     }
 
 }
+.precio-plan {
+    display: inline-block;
+    color: #1e3a24;
+    font-size: 18px;
+    margin-top: 8px;
+}
+
+.resultado-precio {
+    width: 100%;
+    margin: 5px 0 22px;
+    padding: 16px;
+    border-radius: 10px;
+    background: #f1f5ed;
+    color: #1e3a24;
+    text-align: center;
+    font-size: 17px;
+}
+
+@media (max-width: 600px) {
+
+    .resultado-precio {
+        font-size: 16px;
+        padding: 14px 10px;
+    }
+
+}
