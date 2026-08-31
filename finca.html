@@ -474,14 +474,21 @@
 </footer>
 
 
+```html
 <script>
 
-
+// ================================
 // RESERVAR DESDE LAS TARJETAS
+// ================================
 
 function reservar(plan) {
 
-    document.getElementById("servicio").value = plan;
+    const servicio =
+        document.getElementById("servicio");
+
+    servicio.value = plan;
+
+    calcularPrecio();
 
     document.getElementById("reservas").scrollIntoView({
         behavior: "smooth"
@@ -490,68 +497,255 @@ function reservar(plan) {
 }
 
 
-// ENVIAR FORMULARIO A WHATSAPP
+// ================================
+// CALCULAR PRECIO
+// ================================
 
-document.getElementById("formReserva").addEventListener("submit", function(event) {
+function calcularPrecio() {
 
-    event.preventDefault();
-
-    const nombre =
-        document.getElementById("nombre").value;
-
-    const telefono =
-        document.getElementById("telefono").value;
-
-    const servicio =
+    const plan =
         document.getElementById("servicio").value;
 
-    const fecha =
-        document.getElementById("fecha").value;
-
-    const hora =
-        document.getElementById("hora").value;
-
     const personas =
-        document.getElementById("personas").value;
+        parseInt(document.getElementById("personas").value) || 0;
 
-    const observaciones =
-        document.getElementById("observaciones").value;
-
-
-    const mensaje =
-        "🌿 *SOLICITUD DE RESERVA - FINCA EMANUEL*%0A%0A" +
-
-        "👤 Nombre: " +
-        encodeURIComponent(nombre) +
-
-        "%0A📞 Teléfono: " +
-        encodeURIComponent(telefono) +
-
-        "%0A🌿 Plan: " +
-        encodeURIComponent(servicio) +
-
-        "%0A📅 Fecha: " +
-        encodeURIComponent(fecha) +
-
-        "%0A🕐 Hora: " +
-        encodeURIComponent(hora) +
-
-        "%0A👥 Personas: " +
-        encodeURIComponent(personas) +
-
-        "%0A📝 Observaciones: " +
-        encodeURIComponent(observaciones);
+    const resultado =
+        document.getElementById("resultadoPrecio");
 
 
-    window.open(
-        "https://wa.me/573206564360?text=" + mensaje,
-        "_blank"
-    );
+    if (!plan || personas < 1) {
 
-});
+        resultado.innerHTML =
+            "💰 Selecciona un plan y la cantidad de personas para calcular el valor.";
+
+        return;
+    }
 
 
-// NO PERMITIR FECHAS ANTERIORES A HOY
+    let total = 0;
+
+
+    // PASADÍA
+
+    if (plan === "Pasadía") {
+
+        if (personas <= 19) {
+
+            total = 200000;
+
+        } else if (personas <= 30) {
+
+            total = 250000;
+
+        } else if (personas <= 40) {
+
+            total = 350000;
+
+        } else {
+
+            total =
+                350000 + ((personas - 40) * 8300);
+
+        }
+
+    }
+
+
+    // CANCHA
+
+    else if (plan === "Cancha - 1 hora") {
+
+        total = 60000;
+
+    }
+
+
+    // PLAN 24 HORAS
+
+    else if (plan === "Plan 24 horas") {
+
+        if (personas <= 10) {
+
+            resultado.innerHTML =
+                "⚠️ El Plan 24 horas está disponible para grupos mayores de 10 personas.";
+
+            return;
+
+        }
+
+        total =
+            personas * 30000;
+
+    }
+
+
+    // OTROS PLANES
+
+    else {
+
+        resultado.innerHTML =
+            "💰 Precio por confirmar. Te contactaremos para confirmar disponibilidad y tarifa.";
+
+        return;
+
+    }
+
+
+    resultado.innerHTML =
+        "💰 <strong>Total estimado: $" +
+        total.toLocaleString("es-CO") +
+        "</strong>";
+
+}
+
+
+// ================================
+// ACTUALIZAR PRECIO AUTOMÁTICAMENTE
+// ================================
+
+document
+    .getElementById("servicio")
+    .addEventListener("change", calcularPrecio);
+
+
+document
+    .getElementById("personas")
+    .addEventListener("input", calcularPrecio);
+
+
+// ================================
+// ENVIAR RESERVA A WHATSAPP
+// ================================
+
+document
+    .getElementById("formReserva")
+    .addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+
+        const nombre =
+            document.getElementById("nombre").value;
+
+        const telefono =
+            document.getElementById("telefono").value;
+
+        const servicio =
+            document.getElementById("servicio").value;
+
+        const fecha =
+            document.getElementById("fecha").value;
+
+        const hora =
+            document.getElementById("hora").value;
+
+        const personas =
+            document.getElementById("personas").value;
+
+        const observaciones =
+            document.getElementById("observaciones").value;
+
+
+        // CALCULAR TOTAL
+
+        let total = 0;
+
+
+        if (servicio === "Pasadía") {
+
+            if (personas <= 19) {
+
+                total = 200000;
+
+            } else if (personas <= 30) {
+
+                total = 250000;
+
+            } else if (personas <= 40) {
+
+                total = 350000;
+
+            } else {
+
+                total =
+                    350000 + ((personas - 40) * 8300);
+
+            }
+
+        }
+
+
+        else if (servicio === "Cancha - 1 hora") {
+
+            total = 60000;
+
+        }
+
+
+        else if (servicio === "Plan 24 horas") {
+
+            total =
+                personas * 30000;
+
+        }
+
+
+        let precioTexto;
+
+
+        if (total > 0) {
+
+            precioTexto =
+                "$" + total.toLocaleString("es-CO");
+
+        } else {
+
+            precioTexto =
+                "Por confirmar";
+
+        }
+
+
+        const mensaje =
+
+            "🌿 *SOLICITUD DE RESERVA - FINCA EMANUEL*%0A%0A" +
+
+            "👤 Nombre: " +
+            encodeURIComponent(nombre) +
+
+            "%0A📞 Teléfono: " +
+            encodeURIComponent(telefono) +
+
+            "%0A🌿 Plan: " +
+            encodeURIComponent(servicio) +
+
+            "%0A📅 Fecha: " +
+            encodeURIComponent(fecha) +
+
+            "%0A🕐 Hora: " +
+            encodeURIComponent(hora) +
+
+            "%0A👥 Personas: " +
+            encodeURIComponent(personas) +
+
+            "%0A💰 Total estimado: " +
+            encodeURIComponent(precioTexto) +
+
+            "%0A📝 Observaciones: " +
+            encodeURIComponent(observaciones);
+
+
+        window.open(
+            "https://wa.me/573206564360?text=" + mensaje,
+            "_blank"
+        );
+
+    });
+
+
+// ================================
+// FECHA MÍNIMA = HOY
+// ================================
 
 const fechaInput =
     document.getElementById("fecha");
@@ -561,8 +755,8 @@ const hoy =
 
 fechaInput.min = hoy;
 
-
 </script>
+```
 
 
 </body>
