@@ -609,7 +609,28 @@ function calcularPrecio() {
             personas * 30000;
 
     }
+} else if (plan === "Camping") {
 
+    let extras = document.querySelectorAll(
+        '#extrasCamping input[type="checkbox"]:checked'
+    );
+
+    total = personas * 20000;
+
+    extras.forEach(function(extra) {
+
+        const valor = parseInt(extra.value);
+        const tipo = extra.dataset.tipo;
+
+        if (tipo === "persona") {
+            total += valor * personas;
+        } else {
+            total += valor;
+        }
+
+    });
+
+}
 
     // OTROS PLANES
 
