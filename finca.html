@@ -665,7 +665,52 @@ document
     .getElementById("personas")
     .addEventListener("input", calcularPrecio);
 
+// ================================
+// EXTRAS DE CAMPING
+// ================================
 
+const extrasCamping =
+    document.getElementById("extrasCamping");
+
+const servicioCamping =
+    document.getElementById("servicio");
+
+
+// Mostrar u ocultar extras
+
+servicioCamping.addEventListener("change", function () {
+
+    if (this.value === "Camping") {
+
+        extrasCamping.style.display = "block";
+
+    } else {
+
+        extrasCamping.style.display = "none";
+
+        extrasCamping
+            .querySelectorAll('input[type="checkbox"]')
+            .forEach(function (check) {
+                check.checked = false;
+            });
+    }
+
+    calcularPrecio();
+
+});
+
+
+// Recalcular cuando se selecciona un extra
+
+extrasCamping
+    .querySelectorAll('input[type="checkbox"]')
+    .forEach(function (check) {
+
+        check.addEventListener("change", function () {
+            calcularPrecio();
+        });
+
+    });
 // ================================
 // ENVIAR RESERVA A WHATSAPP
 // ================================
