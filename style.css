@@ -801,3 +801,88 @@ footer p{
         max-width: 55%;
     }
 }
+
+/* ACCESOS A LOS TRES NEGOCIOS */
+
+.negocios {
+    padding: 55px 20px;
+    background: #111;
+    text-align: center;
+}
+
+.negocios h2 {
+    color: #FFD700;
+    font-size: clamp(25px, 4vw, 36px);
+    margin-bottom: 30px;
+}
+
+.negocios-contenedor {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.negocio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+    min-height: 240px;
+    border-radius: 16px;
+    border: 1px solid #444;
+    background: #1b1b1b;
+    color: white;
+    transition: transform .25s, border-color .25s;
+}
+
+.negocio:hover {
+    transform: translateY(-5px);
+    border-color: #FFD700;
+}
+
+.negocio span {
+    font-size: 42px;
+}
+
+.negocio h3 {
+    color: #FFD700;
+    margin: 15px 0 8px;
+}
+
+.negocio p {
+    color: #ddd;
+}
+
+.negocio strong {
+    margin-top: 12px;
+    padding: 11px 16px;
+    border-radius: 8px;
+    background: #d62828;
+    color: white;
+}
+
+.negocio-restaurante {
+    border-top: 4px solid #FFD700;
+}
+
+.negocio-finca {
+    border-top: 4px solid #299447;
+}
+
+.negocio-carniceria {
+    border-top: 4px solid #d62828;
+}
+
+@media (max-width: 750px) {
+    .negocios-contenedor {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+    }
+
+    .negocio {
+        min-height: 200px;
+    }
+}
