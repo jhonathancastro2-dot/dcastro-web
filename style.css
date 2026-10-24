@@ -81,26 +81,17 @@ nav a:hover{
    3. HERO / PORTADA
    ========================================================= */
 
-.hero{
-    position:relative;
-    background:
-        linear-gradient(
-            rgba(0,0,0,.72),
-            rgba(0,0,0,.78)
-        ),
-        url("https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=1600&q=85");
-
-    background-size:cover;
-    background-position:center;
-    min-height:620px;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    text-align:center;
-    color:#fff;
-    padding:100px 20px;
+.hero {
+    position: relative;
+    background: linear-gradient(135deg, #080808, #1b1b1b, #080808);
+    min-height: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 45px 20px;
+    border-bottom: 3px solid #FFD700;
 }
 
 .hero-contenido{
