@@ -779,13 +779,21 @@ footer p{
 
 }
 ```
+
 .logo-dcastro {
-    width: 180px;
-    max-width: 60%;
+    width: 260px;
+    max-width: 75%;
     height: auto;
     display: block;
-    margin: 0 auto 15px;
+    margin: 0 auto;
 }
+@media (max-width: 600px) {
+    .logo-dcastro {
+        width: 200px;
+        max-width: 75%;
+    }
+}
+
 @media (max-width: 600px) {
     .logo-dcastro {
         width: 140px;
